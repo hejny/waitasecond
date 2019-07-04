@@ -1,4 +1,13 @@
-import { Awesome } from './classes/Awesome';
-import { awesome } from './utils/awesome';
+import { forAllImagesInElement } from './functions/forAllImagesInElement';
+import { forAnimationFrame } from './functions/forAnimationFrame';
+import { forImmediate } from './functions/forImmediate';
+import { forTime } from './functions/forTime';
+import { forValueDefined } from './functions/forValueDefined';
 
-export { Awesome, awesome };
+export {
+    forAllImagesInElement,
+    forAnimationFrame,
+    forImmediate,
+    forTime,
+    forValueDefined,
+};

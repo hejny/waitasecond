@@ -1,9 +1,9 @@
-import { Awesome } from '../src/classes/Awesome';
+import { forTime } from '../src';
 
-test('Awesome', () => {
-    const awesome = new Awesome();
-
-    expect(() => {
-        awesome.someMethod();
+test('WaitMinute', () => {
+    expect(async () => {
+        await forTime(10);
     }).not.toThrowError();
+
+    // TODO: Make test cover
 });

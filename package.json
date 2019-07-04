@@ -1,7 +1,7 @@
 {
-  "name": "awesome",
+  "name": "waitminute",
   "version": "0.0.2",
-  "description": "awesome description",
+  "description": "Wait minute description",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -9,8 +9,7 @@
     "build": "tsc",
     "build-watch": "tsc --watch",
     "prettier": "prettier --config .prettierrc --write \"{src,test,.vscode}/**/*.{ts,json}\"",
-    "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
-    "documentation": "git diff --exit-code && typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Awesome\" ./src && git add docs && git commit -m \"Documentation\"",
+    "prettier-watch": "onchange \"{src,test,.vscode}/**/*.{ts,json}\" -- prettier --config .prettierrc --write {{changed}}",  "documentation": "git diff --exit-code && typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"WaitMinute\" ./src && git add docs && git commit -m \"Documentation\"",
     "test": "jest --config jestconfig.json",
     "test-watch": "jest --config jestconfig.json --watchAll",
     "lint": "tslint -p tsconfig.json",
@@ -19,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:hejny/configchecker.git"
+    "url": "git+ssh://git@github.com:hejny/waitminute.git"
   },
   "author": "Pavol Hejný",
   "license": "MIT",

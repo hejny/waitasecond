@@ -1,6 +1,6 @@
-# Awesome library
+# WaitMinute library
 
-A very simple tool library for the awesome thing.
+A very simple tool library for the waitMinute thing.
 
 # Install
 
@@ -15,7 +15,7 @@ npm i waitsecond
 
 
 ```typescript
-import {  } from 'awesome';
+import {  } from 'waitMinute';
 
 // TODO:
 ```
@@ -30,7 +30,7 @@ I am opened to your pull requests, feedback, suggestions and donations :) . Cont
 Just do
 
 ```bash
-npm run patch
+npm version patch
 ```
 or *minor* or *major*. Scripts defined in package.json will test, lint, build, create documentation and push the whole project for you.
 
@@ -42,4 +42,4 @@ or *minor* or *major*. Scripts defined in package.json will test, lint, build, c
 
 # Thanks
 
-To boilerplate was used [my-awesome-greeter](https://github.com/caki0915/my-awesome-greeter).
+To boilerplate was used [my-waitMinute-greeter](https://github.com/caki0915/my-waitMinute-greeter).
