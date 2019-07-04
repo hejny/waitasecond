@@ -10,12 +10,12 @@
     "build-watch": "tsc --watch",
     "prettier": "prettier --config .prettierrc --write \"{src,test,.vscode}/**/*.{ts,json}\"",
     "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
+    "documentation": "git diff --exit-code && typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Awesome\" ./src && git commit -am \"Documentation\"",
     "test": "jest --config jestconfig.json",
     "test-watch": "jest --config jestconfig.json --watchAll",
     "lint": "tslint -p tsconfig.json",
-    "prepublish": "npm test && npm run lint && npm run build",
-    "preversion": "npm run lint",
-    "postversion": "git push && git push --tags"
+    "preversion": "npm test && npm run lint && npm run build && npm run documentation",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",

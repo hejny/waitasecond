@@ -1,6 +1,4 @@
-import { ConfigChecker } from './classes/Awesome';
-import { IConfigSource } from './interfaces/IAwesomeInterface';
-import { IConfigValueProfile } from './interfaces/IConfigValueProfile';
-import * as ObjectUtils from './utils/object';
+import { Awesome } from './classes/Awesome';
+import { awesome } from './utils/awesome';
 
-export { ConfigChecker, IConfigSource, IConfigValueProfile, ObjectUtils };
+export { Awesome, awesome };
