@@ -4,7 +4,7 @@ export async function forAllImagesInElement(
     await Promise.all(
         Array.from(element.querySelectorAll('img')).map(
             (imgElement) =>
-                new Promise((resolve, reject) => {
+                new Promise((resolve) => {
                     imgElement.addEventListener('load', () => {
                         resolve();
                     });
