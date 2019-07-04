@@ -1,0 +1,13 @@
+/lib
+/coverage
+
+# IDEs
+.idea
+.vscode/*
+!.vscode/terminals.json
+
+node_modules
+
+
+.~lock*
+

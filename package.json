@@ -1,0 +1,42 @@
+{
+  "name": "configchecker",
+  "version": "0.4.1",
+  "description": "Awesome checker of config - fully support typescript, fluent API,...",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "start": "npm run build-watch",
+    "build": "tsc",
+    "build-watch": "tsc --watch",
+    "prettier": "prettier --config .prettierrc --write \"{src,test,.vscode}/**/*.{ts,json}\"",
+    "prettier-watch": "onchange --initial \"**/*\" -- npm run prettier",
+    "test": "jest --config jestconfig.json",
+    "test-watch": "jest --config jestconfig.json --watchAll",
+    "lint": "tslint -p tsconfig.json",
+    "prepublish": "npm test && npm run lint && npm run build",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:hejny/configchecker.git"
+  },
+  "author": "Pavol Hejný",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "codecov": "^3.5.0",
+    "jest": "^24.8.0",
+    "onchange": "^3.3.0",
+    "prettier": "github:prettier/prettier",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.5.1"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}

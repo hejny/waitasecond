@@ -1,0 +1,4 @@
+export class Awesome {
+    someMethod(){
+    }
+}
