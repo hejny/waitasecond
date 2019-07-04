@@ -1,5 +1,5 @@
 export function forImmediate(): Promise<void> {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         setImmediate(() => {
             resolve();
         });
