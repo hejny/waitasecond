@@ -4,6 +4,6 @@ test('Awesome', () => {
     
     const awesome = new Awesome();
 
-    expect(() => awesome.someMethod().not.toThrowError();
+    expect(() => {awesome.someMethod()}).not.toThrowError();
 
 });

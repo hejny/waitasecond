@@ -1,7 +1,7 @@
 {
-  "name": "configchecker",
-  "version": "0.4.1",
-  "description": "Awesome checker of config - fully support typescript, fluent API,...",
+  "name": "awesome",
+  "version": "0.0.0",
+  "description": "awesome description",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
