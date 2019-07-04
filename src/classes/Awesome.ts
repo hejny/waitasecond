@@ -1,4 +1,5 @@
 export class Awesome {
-    someMethod(){
+    public someMethod() {
+        return 'awesome';
     }
 }

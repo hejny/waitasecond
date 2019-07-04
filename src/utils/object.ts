@@ -1,3 +1,3 @@
-
-export function awesome(){
+export function awesome() {
+    return 'awesome';
 }
