@@ -11,3 +11,5 @@ export {
     forTime,
     forValueDefined,
 };
+
+// TODO: forever
