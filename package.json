@@ -6,7 +6,7 @@
   "typings": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
-    "dist",
+    "dist"
   ],
   "scripts": {
     "start": "npm run build-watch",
