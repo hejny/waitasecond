@@ -1,13 +1,16 @@
 {
   "name": "waitasecond",
   "version": "0.1.2",
-  "description": "ple tool library for the waiting using Promises.",
-  "main": "dist/",
+  "description": "Simple tool library for the waiting using Promises.",
+  "main": "dist/**",
   "typings": "dist/index.d.ts",
   "sideEffects": false,
   "files": [
-    "dist"
+    "dist/**"
   ],
+  "directions":{
+    "functions": "dist/functions"
+  },
   "scripts": {
     "start": "npm run build-watch",
     "build": "tsc",
