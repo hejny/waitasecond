@@ -1,5 +1,5 @@
 {
-  "name": "waitsecond",
+  "name": "waitasecond",
   "version": "0.1.0",
   "description": "Wait second description",
   "main": "dist/index.js",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:hejny/waitsecond.git"
+    "url": "git+ssh://git@github.com:hejny/waitasecond.git"
   },
   "author": "Pavol Hejný",
   "license": "MIT",

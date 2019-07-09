@@ -1,4 +1,4 @@
-# WaitSecond library
+# WaitASecond library
 
 A very simple tool library for the waiting using Promises.
 
@@ -7,7 +7,7 @@ A very simple tool library for the waiting using Promises.
 Install from [NPM](https://www.npmjs.com/package/configchecker)
 
 ```bash
-npm i waitsecond
+npm i waitasecond
 ```
 
 # Usage
@@ -15,7 +15,7 @@ npm i waitsecond
 
 
 ```typescript
-import {  } from 'waitSecond';
+import {  } from 'waitASecond';
 
 // TODO:
 ```
