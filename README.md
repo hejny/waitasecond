@@ -1,4 +1,4 @@
-# WaitASecond library
+# Wait a second library
 
 A very simple tool library for the waiting using Promises.
 

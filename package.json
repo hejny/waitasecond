@@ -1,7 +1,7 @@
 {
   "name": "waitasecond",
   "version": "0.1.0",
-  "description": "Wait second description",
+  "description": "ple tool library for the waiting using Promises.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "sideEffects": false,
