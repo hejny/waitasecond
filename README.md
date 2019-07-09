@@ -1,6 +1,6 @@
-# WaitMinute library
+# WaitSecond library
 
-A very simple tool library for the waitMinute thing.
+A very simple tool library for the waitSecond thing.
 
 # Install
 
@@ -15,7 +15,7 @@ npm i waitsecond
 
 
 ```typescript
-import {  } from 'waitMinute';
+import {  } from 'waitSecond';
 
 // TODO:
 ```
@@ -42,4 +42,4 @@ or *minor* or *major*. Scripts defined in package.json will test, lint, build, c
 
 # Thanks
 
-To boilerplate was used [my-waitMinute-greeter](https://github.com/caki0915/my-waitMinute-greeter).
+To boilerplate was used [my-waitSecond-greeter](https://github.com/caki0915/my-waitSecond-greeter).

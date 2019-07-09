@@ -1,6 +1,6 @@
 import { forTime } from '../src';
 
-test('WaitMinute', () => {
+test('WaitSecond', () => {
     expect(async () => {
         await forTime(10);
     }).not.toThrowError();
