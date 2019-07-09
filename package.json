@@ -2,8 +2,12 @@
   "name": "waitsecond",
   "version": "0.0.3",
   "description": "Wait second description",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+  ],
   "scripts": {
     "start": "npm run build-watch",
     "build": "tsc",
@@ -35,8 +39,5 @@
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.14.2",
     "typescript": "^3.5.1"
-  },
-  "files": [
-    "lib/**/*"
-  ]
+  }
 }

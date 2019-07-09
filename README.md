@@ -1,6 +1,6 @@
 # WaitSecond library
 
-A very simple tool library for the waitSecond thing.
+A very simple tool library for the waiting using Promises.
 
 # Install
 
@@ -39,7 +39,3 @@ or *minor* or *major*. Scripts defined in package.json will test, lint, build, c
 - [Pavol Hejný](https://github.com/hejny)
 - [David Pohan](https://github.com/pohy)
 
-
-# Thanks
-
-To boilerplate was used [my-waitSecond-greeter](https://github.com/caki0915/my-waitSecond-greeter).
