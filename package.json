@@ -17,11 +17,13 @@
     "build-watch": "tsc --watch",
     "prettier": "prettier --config .prettierrc --write \"{src,test,.vscode}/**/*.{ts,json}\"",
     "prettier-watch": "onchange \"{src,test,.vscode}/**/*.{ts,json}\" -- prettier --config .prettierrc --write {{changed}}",
-    "documentation": "git diff --exit-code && typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Wait second\" ./src && git add docs && git commit -m \"Documentation\"",
+    "prettier-commit": "git diff --exit-code && npm run prettier && git add src && git commit -m \"Prettier\"",
+    "documentation": "typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Wait second\" ./src",
+    "documentation-commit": "git diff --exit-code && npm run documentation && git add docs && git commit -m \"Documentation\"",
     "test": "jest --config jestconfig.json",
     "test-watch": "jest --config jestconfig.json --watchAll",
     "lint": "tslint -p tsconfig.json",
-    "preversion": "npm test && npm run lint && npm run build && npm run documentation",
+    "preversion": "npm test && npm run lint && npm run build && npm run prettier-commit && npm run documentation-commit",
     "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
