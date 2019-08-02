@@ -1,7 +1,7 @@
-export function forAnimationFrame(): Promise<void> {
+export function forAnimationFrame(): Promise<number> {
     return new Promise((resolve) => {
-        requestAnimationFrame(() => {
-            resolve();
+        requestAnimationFrame((now) => {
+            resolve(now);
         });
     });
 }
