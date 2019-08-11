@@ -3,6 +3,7 @@ import { forAnimationFrame } from './functions/forAnimationFrame';
 import { forImmediate } from './functions/forImmediate';
 import { forTime } from './functions/forTime';
 import { forValueDefined } from './functions/forValueDefined';
+import { forDocumentLoad } from './functions/forDocumentLoad';
 
 export {
     forAllImagesInElement,
@@ -10,6 +11,7 @@ export {
     forImmediate,
     forTime,
     forValueDefined,
+    forDocumentLoad
 };
 
 // TODO: forever
