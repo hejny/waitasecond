@@ -1,17 +1,10 @@
 import { forAllImagesInElement } from './functions/forAllImagesInElement';
 import { forAnimationFrame } from './functions/forAnimationFrame';
+import { forDocumentLoad } from './functions/forDocumentLoad';
 import { forImmediate } from './functions/forImmediate';
 import { forTime } from './functions/forTime';
 import { forValueDefined } from './functions/forValueDefined';
-import { forDocumentLoad } from './functions/forDocumentLoad';
 
-export {
-    forAllImagesInElement,
-    forAnimationFrame,
-    forImmediate,
-    forTime,
-    forValueDefined,
-    forDocumentLoad
-};
+export { forAllImagesInElement, forAnimationFrame, forImmediate, forTime, forValueDefined, forDocumentLoad };
 
 // TODO: forever
