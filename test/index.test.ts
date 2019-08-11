@@ -1,4 +1,4 @@
-import { forTime } from '../src';
+import { forTime } from '../src/main';
 
 test('WaitASecond', () => {
     expect(async () => {
