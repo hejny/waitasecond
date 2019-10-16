@@ -3,15 +3,26 @@ export async function forAllImagesInElement(
 ): Promise<void> {
     await Promise.all(
         Array.from(element.querySelectorAll('img')).map(
-            (imgElement) =>
-                new Promise((resolve, reject) => {
+            (imgElement) => {
+                return new Promise((resolve, reject) => {
+                    if(imgElement.complete) {
+                        if(imgElement.naturalHeight === 0) {
+                            reject(imgElement);
+                        } else {
+                            resolve();
+                        }
+
+                        return;
+                    };
+
                     imgElement.addEventListener('load', () => {
                         resolve();
                     });
-                    imgElement.addEventListener('error', (event) => {
-                        reject(event.target);
+                    imgElement.addEventListener('error', () => {
+                        reject(imgElement);
                     });
-                }),
+                })
+            }
         ),
     );
     return;
