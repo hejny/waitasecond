@@ -32,4 +32,4 @@ Just do
 ```bash
 npm version patch
 ```
-or *minor* or *major*. Scripts defined in package.json will test, lint, build, create documentation and push the whole project for you.
+on *minor* or *major*. Scripts defined in package.json will test, lint, build, create documentation and push the whole project for you.
