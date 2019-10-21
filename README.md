@@ -15,7 +15,7 @@ npm i waitasecond
 
 
 ```typescript
-import {  } from 'waitASecond';
+import {  } from 'waitasecond';
 
 // TODO:
 ```
