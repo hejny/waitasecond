@@ -33,9 +33,3 @@ Just do
 npm version patch
 ```
 or *minor* or *major*. Scripts defined in package.json will test, lint, build, create documentation and push the whole project for you.
-
-# Authors
-
-- [Pavol Hejný](https://github.com/hejny)
-- [David Pohan](https://github.com/pohy)
-
