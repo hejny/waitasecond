@@ -6,7 +6,7 @@ export async function forAllImagesInElement(
     try {
         await Promise.all(
             // TODO: How to handle console.info
-            Array.from(element.querySelectorAll('img')).map((imgElement, i) => {
+            Array.from(element.querySelectorAll('img')).map((imgElement) => {
                 return new Promise((resolve, reject) => {
                     if (imgElement.complete) {
                         if (imgElement.naturalHeight === 0) {
