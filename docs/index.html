@@ -938,7 +938,7 @@ img { max-width: 100%; }
 			<p>Install from <a href="https://www.npmjs.com/package/configchecker">NPM</a></p>
 			<pre><code class="language-bash">npm i waitasecond</code></pre>
 			<h1 id="usage">Usage</h1>
-			<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {  } <span class="hljs-keyword">from</span> <span class="hljs-string">'waitASecond'</span>;
+			<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {  } <span class="hljs-keyword">from</span> <span class="hljs-string">'waitasecond'</span>;
 
 <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span></span></code></pre>
 			<h1 id="contributing">Contributing</h1>
@@ -946,12 +946,7 @@ img { max-width: 100%; }
 			<h2 id="publishing-a-new-version">Publishing a new version</h2>
 			<p>Just do</p>
 			<pre><code class="language-bash">npm version patch</code></pre>
-			<p>or <em>minor</em> or <em>major</em>. Scripts defined in package.json will test, lint, build, create documentation and push the whole project for you.</p>
-			<h1 id="authors">Authors</h1>
-			<ul>
-				<li><a href="https://github.com/hejny">Pavol Hejný</a></li>
-				<li><a href="https://github.com/pohy">David Pohan</a></li>
-			</ul>
+			<p>on <em>minor</em> or <em>major</em>. Scripts defined in package.json will test, lint, build, create documentation and push the whole project for you.</p>
 		</div>
 		<div style="position:relative;"><a name="typedoc-main-index" class="tsd-anchor"></a></div>
 		<section class="tsd-panel-group tsd-index-group">
@@ -978,19 +973,25 @@ img { max-width: 100%; }
 				<a name="forallimagesinelement" class="tsd-anchor"></a>
 				<h3>for<wbr>All<wbr>Images<wbr>InElement</h3>
 				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">for<wbr>All<wbr>Images<wbr>InElement<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">for<wbr>All<wbr>Images<wbr>InElement<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, rejectWhenNotLoaded<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, timeout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/c05db73/src/functions/forAllImagesInElement.ts#L1">functions/forAllImagesInElement.ts:1</a></li>
+								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/d9e5b15/src/functions/forAllImagesInElement.ts#L1">functions/forAllImagesInElement.ts:1</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>element: <span class="tsd-signature-type">HTMLElement</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> rejectWhenNotLoaded: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> timeout: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1500</span></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1007,7 +1008,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/c05db73/src/functions/forAnimationFrame.ts#L1">functions/forAnimationFrame.ts:1</a></li>
+								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/d9e5b15/src/functions/forAnimationFrame.ts#L1">functions/forAnimationFrame.ts:1</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1024,7 +1025,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/c05db73/src/functions/forDocumentLoad.ts#L1">functions/forDocumentLoad.ts:1</a></li>
+								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/d9e5b15/src/functions/forDocumentLoad.ts#L1">functions/forDocumentLoad.ts:1</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1041,7 +1042,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/c05db73/src/functions/forImmediate.ts#L1">functions/forImmediate.ts:1</a></li>
+								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/d9e5b15/src/functions/forImmediate.ts#L1">functions/forImmediate.ts:1</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1058,7 +1059,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/c05db73/src/functions/forTime.ts#L1">functions/forTime.ts:1</a></li>
+								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/d9e5b15/src/functions/forTime.ts#L1">functions/forTime.ts:1</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1081,7 +1082,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/c05db73/src/functions/forValueDefined.ts#L3">functions/forValueDefined.ts:3</a></li>
+								<li>Defined in <a href="https://github.com/hejny/waitasecond/blob/d9e5b15/src/functions/forValueDefined.ts#L3">functions/forValueDefined.ts:3</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
