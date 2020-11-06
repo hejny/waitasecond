@@ -2,7 +2,6 @@ import { forAllImagesInElement } from './functions/forAllImagesInElement';
 import { forAnimationFrame } from './functions/forAnimationFrame';
 import { forDocumentLoad } from './functions/forDocumentLoad';
 import { forDOMContentLoaded } from './functions/forDOMContentLoaded';
-import { forImmediate } from './functions/forImmediate';
 import { forTime } from './functions/forTime';
 import { forTimeSynced } from './functions/forTimeSynced';
 import { forValueDefined } from './functions/forValueDefined';
@@ -10,7 +9,6 @@ import { forValueDefined } from './functions/forValueDefined';
 export {
     forAllImagesInElement,
     forAnimationFrame,
-    forImmediate,
     forTime,
     forTimeSynced,
     forValueDefined,
