@@ -13,14 +13,14 @@ import { forTimeSynced } from './functions/forTimeSynced';
 import { forValueDefined } from './functions/forValueDefined';
 
 export {
-forTime,
-forEver,
-forTimeout,
-forImmediate,
-forTimeSynced,
-forValueDefined,
-forDocumentLoad,
-forAnimationFrame,
-forDOMContentLoaded,
-forAllImagesInElement
+    forTime,
+    forEver,
+    forTimeout,
+    forImmediate,
+    forTimeSynced,
+    forValueDefined,
+    forDocumentLoad,
+    forAnimationFrame,
+    forDOMContentLoaded,
+    forAllImagesInElement,
 };
