@@ -7,11 +7,13 @@
         },
         {
             "name": "prettier-watch",
-            "command": "npm run prettier-watch"
+            "command": "npm run prettier-watch",
+            "onlySingle": true
         },
         {
             "name": "test-watch",
-            "command": "npm run test-watch"
+            "command": "npm run test-watch",
+            "onlySingle": true
         },
         {
             "name": "generate-main-exports",

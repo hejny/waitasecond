@@ -1,54 +1,54 @@
 {
-  "name": "waitasecond",
-  "version": "1.5.0",
-  "description": "Simple tool library for the waiting using Promises.",
-  "main": "dist/main.js",
-  "typings": "dist/main.d.ts",
-  "sideEffects": false,
-  "files": [
-    "dist/**"
-  ],
-  "directions": {
-    "functions": "dist/functions"
-  },
-  "scripts": {
-    "start": "npm run build-watch",
-    "build": "tsc",
-    "build-watch": "tsc --watch",
-    "prettier": "prettier --config .prettierrc --write \"{src,test,.vscode}/**/*.{ts,json}\"",
-    "pretty-imports": "npx organize-imports-cli tsconfig.json",
-    "prettier-watch": "onchange \"{src,test,.vscode}/**/*.{ts,json}\" -- prettier --config .prettierrc --write {{changed}}",
-    "prettier-commit": "git diff --exit-code && npm run pretty-imports && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
-    "documentation": "typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Wait second\" ./src",
-    "documentation-commit": "git diff --exit-code && npm run documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
-    "test": "jest --config jestconfig.json",
-    "test-watch": "jest --config jestconfig.json --watchAll",
-    "lint": "tslint -p tsconfig.json",
-    "generate-main-exports": "ts-node ./scripts/generate-main-exports/generate-main-exports.ts",
-    "generate-main-exports-commit": "git diff --exit-code && npm run generate-main-exports && npm run prettier && git add src && git commit --allow-empty -m \"Updating exports\"",
-    "preversion": "npm test && npm run lint && npm run generate-main-exports-commit && npm run build && npm run prettier-commit && npm run documentation-commit",
-    "postversion": "git push && git push --tags && npm publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:hejny/waitasecond.git"
-  },
-  "author": "Pavol Hejný",
-  "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {
-    "@types/jest": "^24.0.13",
-    "codecov": "^3.5.0",
-    "glob-promise": "^3.4.0",
-    "jest": "^24.8.0",
-    "onchange": "^3.3.0",
-    "organize-imports-cli": "^0.8.0",
-    "prettier": "github:prettier/prettier",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^9.0.0",
-    "tslint": "^5.17.0",
-    "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.14.2",
-    "typescript": "^3.5.1"
-  }
+    "name": "waitasecond",
+    "version": "1.5.0",
+    "description": "Simple tool library for the waiting using Promises.",
+    "main": "dist/main.js",
+    "typings": "dist/main.d.ts",
+    "sideEffects": false,
+    "files": [
+        "dist/**"
+    ],
+    "directions": {
+        "functions": "dist/functions"
+    },
+    "scripts": {
+        "start": "npm run build-watch",
+        "build": "tsc",
+        "build-watch": "tsc --watch",
+        "prettier": "prettier --config .prettierrc --write \"{src,test,.vscode}/**/*.{ts,json}\"",
+        "pretty-imports": "npx organize-imports-cli tsconfig.json",
+        "prettier-watch": "onchange \"{src,test,.vscode}/**/*.{ts,json}\" -- prettier --config .prettierrc --write {{changed}}",
+        "prettier-commit": "git diff --exit-code && npm run pretty-imports && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
+        "documentation": "typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Wait second\" ./src",
+        "documentation-commit": "git diff --exit-code && npm run documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
+        "test": "jest --config jestconfig.json",
+        "test-watch": "jest --config jestconfig.json --watchAll",
+        "lint": "tslint -p tsconfig.json",
+        "generate-main-exports": "ts-node ./scripts/generate-main-exports/generate-main-exports.ts",
+        "generate-main-exports-commit": "git diff --exit-code && npm run generate-main-exports && npm run prettier && git add src && git commit --allow-empty -m \"Updating exports\"",
+        "preversion": "npm test && npm run lint && npm run generate-main-exports-commit && npm run build && npm run prettier-commit && npm run documentation-commit",
+        "postversion": "git push && git push --tags && npm publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:hejny/waitasecond.git"
+    },
+    "author": "Pavol Hejný",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/jest": "^24.0.13",
+        "codecov": "^3.5.0",
+        "glob-promise": "^3.4.0",
+        "jest": "^24.8.0",
+        "onchange": "^3.3.0",
+        "organize-imports-cli": "^0.8.0",
+        "prettier": "github:prettier/prettier",
+        "ts-jest": "^24.0.2",
+        "ts-node": "^9.0.0",
+        "tslint": "^5.17.0",
+        "tslint-config-prettier": "^1.18.0",
+        "typedoc": "^0.14.2",
+        "typescript": "^3.5.1"
+    }
 }
