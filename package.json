@@ -19,7 +19,7 @@
         "pretty-imports": "npx organize-imports-cli tsconfig.json",
         "prettier-watch": "onchange \"{src,test,.vscode}/**/*.{ts,json}\" -- prettier --config .prettierrc --write {{changed}}",
         "prettier-commit": "git diff --exit-code && npm run pretty-imports && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
-        "documentation": "typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Wait second\" ./src",
+        "documentation": "typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Waitasecond\" ./src",
         "documentation-commit": "git diff --exit-code && npm run documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
         "test": "jest --config jestconfig.json",
         "test-watch": "jest --config jestconfig.json --watchAll",
