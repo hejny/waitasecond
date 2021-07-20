@@ -1,11 +1,11 @@
-import { forAnimationFrame } from './forAnimationFrame';
+import { forTime } from './forTime';
 
 type IAwaitable<T> = T | Promise<T>;
 
 export async function forValueDefined<T>(
     getValue: () => IAwaitable<T | undefined | null>,
     waiter: () => Promise<void> = async () => {
-        await forAnimationFrame();
+        await forTime(10);
     },
     limit: number = 1000,
 ): Promise<T> {
