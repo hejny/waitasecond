@@ -2,22 +2,37 @@
     "autokill": true,
     "terminals": [
         {
-            "name": "build-watch",
+            "name": "🧪 build-watch",
             "command": "npm run build-watch"
         },
         {
-            "name": "prettier-watch",
+            "name": "🧪 prettier-watch",
             "command": "npm run prettier-watch",
             "onlySingle": true
         },
         {
-            "name": "test-watch",
+            "name": "🧪 test-watch",
             "command": "npm run test-watch",
             "onlySingle": true
         },
         {
-            "name": "generate-main-exports",
+            "name": "🧪 Test",
+            "command": "npm run test",
+            "onlySingle": true
+        },
+        {
+            "name": "🧪 Lint",
+            "command": "npm run lint",
+            "onlySingle": true
+        },
+        {
+            "name": "🏭 Generate main exports",
             "command": "npm run generate-main-exports",
+            "onlySingle": true
+        },
+        {
+            "name": "🏭 Generate documentation",
+            "command": "npm run generate-documentation",
             "onlySingle": true
         }
     ]
