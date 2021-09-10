@@ -3,6 +3,8 @@ export async function forAllImagesInElement(
     rejectWhenNotLoaded = false,
     timeout = 1500,
 ): Promise<void> {
+
+    // TODO: !!! Also with media and pictures
     try {
         await Promise.all(
             // TODO: How to handle console.info
