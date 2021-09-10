@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sample of forAllImagesInElement</title>
+        <link rel="stylesheet" type="text/css" href="./assets/common.css" />
+    </head>
+    <body>
+        <canvas id="scene" width="500" height="500"></canvas>
+
+        <script type="module">
+            import { forAllImagesInElement } from '../dist/main.js';
+
+            await forAllImagesInElement(document.body);
+
+            alert('loaded');
+        </script>
+    </body>
+</html>

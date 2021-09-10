@@ -1,4 +1,4 @@
-import { forTime } from './forTime';
+import { forTime } from './forTime.js';
 
 type IAwaitable<T> = T | Promise<T>;
 

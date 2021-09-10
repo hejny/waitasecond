@@ -1,4 +1,4 @@
-import { forTime } from './forTime';
+import { forTime } from './forTime.js';
 
 /**
  * This waiter function will sync some action to some precise time

@@ -46,7 +46,7 @@ async function main() {
                 )
                     .split('\\')
                     .join('/')
-                    .replace(/\.tsx?$/, '')}';`,
+                    .replace(/\.tsx?$/, '')}.js';`,
         )
         .join('\n');
     content += '\n\n';

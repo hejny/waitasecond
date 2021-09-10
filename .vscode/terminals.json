@@ -26,6 +26,11 @@
             "onlySingle": true
         },
         {
+            "name": "🧪 Samples",
+            "command": "node ./samples/_samplesServer.js",
+            "onlySingle": true
+        },
+        {
             "name": "🏭 Generate main exports",
             "command": "npm run generate-main-exports",
             "onlySingle": true

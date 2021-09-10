@@ -1,18 +1,15 @@
 {
     "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
+        "target": "es5",
+        "module": "commonjs",
         "declaration": true,
-        "outDir": "./dist",
         "alwaysStrict": true,
         "forceConsistentCasingInFileNames": true,
         "lib": ["dom", "es2017"],
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true
-    },
-    "include": ["src"],
-    "exclude": ["scripts", "samples", "test"]
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    }
 }

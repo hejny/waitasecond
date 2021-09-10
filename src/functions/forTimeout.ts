@@ -1,4 +1,4 @@
-import { forTime } from './forTime';
+import { forTime } from './forTime.js';
 
 export async function forTimeout<T>(
     timeout: number,
