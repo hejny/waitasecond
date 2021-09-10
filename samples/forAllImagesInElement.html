@@ -6,15 +6,28 @@
         <link rel="stylesheet" type="text/css" href="./assets/common.css" />
     </head>
     <body>
+        <h1 class="counter"><h1>
         <img src="./assets/images/image.svg" />
         <img src="./assets/images/simple.png" />
 
+        <!--
+            TODO:
         <script type="module">
             import { forAllImagesInElement } from '../dist/main.js';
-
             await forAllImagesInElement(document.body);
+            window.renderMe();
+        </script>
+        -->
 
-            alert('loaded');
+        <script type="module">
+            import { forTime } from '../dist/main.js';
+
+            const counterElement = document.querySelector('.counter')
+            let i = 1;
+            while(true){
+                await forTime(10);
+                counterElement.innerText = i++; 
+            }
         </script>
     </body>
 </html>

@@ -2,32 +2,31 @@
     "autokill": true,
     "terminals": [
         {
-            "name": "🧪 build-watch",
+            "name": "🧪🔥 Build watch",
             "command": "npm run build-watch"
         },
         {
-            "name": "🧪 prettier-watch",
-            "command": "npm run prettier-watch",
+            "name": "🧪🔥 Samples",
+            "command": "node ./samples/_samplesServer.js"
+        },
+        {
+            "name": "🧪 Unit tests",
+            "command": "npm run test-unit",
             "onlySingle": true
         },
         {
-            "name": "🧪 test-watch",
-            "command": "npm run test-watch",
+            "name": "🧪 Integration tests",
+            "command": "npm run test-integration",
             "onlySingle": true
         },
         {
-            "name": "🧪 Test",
-            "command": "npm run test",
+            "name": "🧪🔥 Integration tests (interactive)",
+            "command": "npm run test-integration-interactive",
             "onlySingle": true
         },
         {
             "name": "🧪 Lint",
             "command": "npm run lint",
-            "onlySingle": true
-        },
-        {
-            "name": "🧪 Samples",
-            "command": "node ./samples/_samplesServer.js",
             "onlySingle": true
         },
         {
