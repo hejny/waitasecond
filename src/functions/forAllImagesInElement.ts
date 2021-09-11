@@ -1,9 +1,10 @@
 export async function forAllImagesInElement(
     element: HTMLElement,
     rejectWhenNotLoaded = false,
+
+    // TODO: Timeout by chaining
     timeout = 1500,
 ): Promise<void> {
-
     // TODO: !!! Also with media and pictures
     try {
         await Promise.all(

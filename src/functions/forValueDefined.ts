@@ -1,7 +1,9 @@
 import { forTime } from './forTime.js';
 
+// TODO: !!! Essentials
 type IAwaitable<T> = T | Promise<T>;
 
+// TODO: !!! Options style in func params everywhere
 export async function forValueDefined<T>(
     getValue: () => IAwaitable<T | undefined | null>,
     waiter: () => Promise<void> = async () => {
