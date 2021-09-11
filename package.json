@@ -41,7 +41,7 @@
         "@types/jest": "^24.0.13",
         "codecov": "^3.5.0",
         "cypress": "^8.3.1",
-        "cypress-image-snapshot": "^4.0.1",
+        "cypress-plugin-snapshots": "^1.4.4",
         "express": "^4.17.1",
         "express-throttle-bandwidth": "^1.0.1",
         "glob-promise": "^4.2.0",

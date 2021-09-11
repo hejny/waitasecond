@@ -7,12 +7,15 @@ context('waitasecond samples', () => {
     });
     */
 
-    const SCREENSHOT_CONFIG: [string, object] = [
-        'forAllImagesInElement',
-        {
-            capture: 'viewport',
+    const SCREENSHOT_CONFIG = {
+        imageConfig: {
+            createDiffImage: true, // Should a "diff image" be created, can be disabled for performance
+            threshold: 0.01, // Amount in pixels or percentage before snapshot image is invalid
+            thresholdType: 'percent', // Can be either "pixel" or "percent"
         },
-    ];
+        name: 'custom image name', // Naming resulting image file with a custom name rather than concatenating test titles
+        separator: 'custom image separator', // Naming resulting image file with a custom separator rather than using the default ` #`
+    };
 
     describe('cleanup of elements', () => {
         it('wait untill all images are load', async () => {
@@ -25,8 +28,11 @@ context('waitasecond samples', () => {
                 })
                 .wait(1000);
 
-            cy.matchImageSnapshot(...SCREENSHOT_CONFIG);
-            cy.matchImageSnapshot(...SCREENSHOT_CONFIG);
+            cy.then(() => {
+                cy.document().toMatchImageSnapshot();
+            });
+
+            //cy.document().toMatchImageSnapshot(SCREENSHOT_CONFIG);
             /*
             for (let i = 0; i < 5; i++) {
                 cy.log(`Visit ${i}`);
