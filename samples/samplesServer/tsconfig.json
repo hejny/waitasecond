@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": true,
+        "alwaysStrict": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["dom", "es2017"],
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    }
+}

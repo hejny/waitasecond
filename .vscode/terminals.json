@@ -7,7 +7,7 @@
         },
         {
             "name": "🧪🔥 Samples",
-            "command": "node ./samples/_samplesServer.js"
+            "command": "npm run samples-server"
         },
         {
             "name": "🧪 Unit tests",
