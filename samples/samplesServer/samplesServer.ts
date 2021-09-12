@@ -20,10 +20,16 @@ const app = express();
 //app.use(throttle(10 /* bits per second */));
 
 app.use(async (request, response, next) => {
-    request;
-    response;
-    await forTime(3333);
-    next();
+    if (request.query.throttle) {
+        const throttle = parseInt(request.query.throttle as string);
+        if (isNaN(throttle)) {
+            return response
+                .status(400)
+                .send(`Query parameter "throttle" should be valid number.`);
+        }
+        await forTime(throttle);
+    }
+    return next();
 });
 app.use(serveStatic(staticBasePath, { index: false, cacheControl: false }));
 app.use(serveIndex(staticBasePath, { icons: true }));

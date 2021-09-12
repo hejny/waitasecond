@@ -7,27 +7,46 @@
     </head>
     <body>
         <h1 class="counter"><h1>
-        <img src="./assets/images/image.svg" />
-        <img src="./assets/images/simple.png" />
 
         <!--
-            TODO:
-        <script type="module">
-            import { forAllImagesInElement } from '../dist/main.js';
-            await forAllImagesInElement(document.body);
-            window.renderMe();
-        </script>
+        <img src="./assets/images/image.svg" />
+        <img src="./assets/images/simple.png" />
         -->
 
-        <script type="module">
-            import { forTime } from '../dist/main.js';
 
+        <img src="./assets/images/photo1.jpg?throttle=0" />
+        <img src="./assets/images/photo1.jpg?throttle=1000" />
+        <img src="./assets/images/photo1.jpg?throttle=3000" />
+        <img src="./assets/images/photo1.jpg?throttle=5000" />
+
+        
+        <script type="module">
+            import { forAllImagesInElement, forTime } from '../dist/main.js';
+
+
+            forAllImagesInElement(document.body).then(()=>{
+                document.body.style.backgroundColor='#22ff99';
+                //window.renderMe();
+            })
+            
             const counterElement = document.querySelector('.counter')
             let i = 1;
             while(true){
                 await forTime(10);
                 counterElement.innerText = i++; 
             }
+
+
+
+          
+           
+        </script>
+        
+
+        <script type="module">
+            import { forTime } from '../dist/main.js';
+
+         
         </script>
     </body>
 </html>

@@ -1,9 +1,11 @@
 import { forAllImagesInElement } from '../../src/functions/forAllImagesInElement';
 
 context('waitasecond samples', () => {
+    // TODO: !!! Test working and non working samples
+
     /*
     beforeEach(() => {
-        // TODO: Run server (there is problem with running the express/http here)
+        // TODO: !!! Run server (there is problem with running the express/http here)
     });
     */
 
