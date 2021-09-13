@@ -55,6 +55,7 @@
         "prettier": "^2.4.0",
         "serve-index": "^1.9.1",
         "serve-static": "^1.14.1",
+        "ts-essentials": "^8.1.0",
         "ts-jest": "^27.0.5",
         "ts-node": "^10.2.1",
         "ts-node-dev": "^1.1.8",

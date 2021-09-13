@@ -1,11 +1,9 @@
 import { forTime } from './forTime.js';
-
-// TODO: !!! Essentials
-type IAwaitable<T> = T | Promise<T>;
+import { AsyncOrSync } from 'ts-essentials';
 
 // TODO: !!! Options style in func params everywhere
 export async function forValueDefined<T>(
-    getValue: () => IAwaitable<T | undefined | null>,
+    getValue: () => AsyncOrSync<T | undefined | null>,
     waiter: () => Promise<void> = async () => {
         await forTime(10);
     },
