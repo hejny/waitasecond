@@ -13,3 +13,5 @@ export async function forTimeSynced(
     const wait = period - ((currentTime - shift) % period);
     await forTime(wait);
 }
+
+// TODO: !!! Human readable forTimeSynced (it is somewhere already implemented)
