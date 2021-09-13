@@ -5,3 +5,8 @@ img {
     max-height: 30vh;
     border: 2px solid black;
 }
+
+.images > div {
+    margin: 10px;
+    border: 2px solid black;
+}

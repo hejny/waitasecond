@@ -6,47 +6,63 @@
         <link rel="stylesheet" type="text/css" href="./assets/common.css" />
     </head>
     <body>
-        <h1 class="counter"><h1>
+        <!--<h1 class="counter"></h1>-->
+        <button
+            class="spawn-images"
+            data-images="
+                ./assets/images/photo1.jpg?throttle=0
+                ./assets/images/photo1.jpg?throttle=1000
+                ./assets/images/photo1.jpg?throttle=3000
+                ./assets/images/photo1.jpg?throttle=5000
+            "
+        >
+            Spawn 4 correct images
+        </button>
 
-        <!--
-        <img src="./assets/images/image.svg" />
-        <img src="./assets/images/simple.png" />
-        -->
+        <button
+            class="spawn-images"
+            data-images="
+            ./assets/images/corrupted-image.jpg
+            ./assets/images/corrupted-image.png
+            ./assets/images/corrupted-image.webp
+            ./assets/images/corrupted-image.svg
+        "
+        >
+            Spawn 4 corrupted images
+        </button>
+        <div class="images"></div>
 
-
-        <img src="./assets/images/photo1.jpg?throttle=0" />
-        <img src="./assets/images/photo1.jpg?throttle=1000" />
-        <img src="./assets/images/photo1.jpg?throttle=3000" />
-        <img src="./assets/images/photo1.jpg?throttle=5000" />
-
-        
         <script type="module">
             import { forAllImagesInElement, forTime } from '../dist/main.js';
 
+            const imagesElement = document.querySelector('.images');
+            //const counterElement = document.querySelector('.counter');
 
-            forAllImagesInElement(document.body).then(()=>{
-                document.body.style.backgroundColor='#22ff99';
-                //window.renderMe();
-            })
-            
-            const counterElement = document.querySelector('.counter')
+            document.querySelectorAll('.spawn-images').forEach((element) =>
+                element.addEventListener('click', async () => {
+                    const imagesSpawnElement = document.createElement('DIV');
+                    imagesElement.appendChild(imagesSpawnElement);
+                    imagesSpawnElement.style.backgroundColor = '#ff2266';
+                    imagesSpawnElement.innerHTML = element
+                        .getAttribute('data-images')
+                        .split(/\s+/g)
+                        .map((src) => src.trim())
+                        .filter((src) => src !== '')
+                        .map((src) => `<img src="${src}"/>`)
+                        .join('\n');
+
+                    await forAllImagesInElement(imagesSpawnElement);
+                    imagesSpawnElement.style.backgroundColor = '#22ff99';
+                }),
+            );
+
+            /*
             let i = 1;
-            while(true){
+            while (true) {
                 await forTime(10);
-                counterElement.innerText = i++; 
+                counterElement.innerText = i++;
             }
-
-
-
-          
-           
-        </script>
-        
-
-        <script type="module">
-            import { forTime } from '../dist/main.js';
-
-         
+            */
         </script>
     </body>
 </html>
