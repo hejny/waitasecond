@@ -1,6 +1,6 @@
 # ⏰ Waitasecond
 
-Waitasecond is an extremely simple and elegant tool for using **working with async code and [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)**. It is usable by browser, worker and node environment and fully typed.
+Wait a second is an extremely simple and elegant tool for using **working with async code and [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)**. It is usable by browser, worker, and node environment and fully typed.
 
 # 🔥 Install
 
@@ -12,15 +12,15 @@ npm i waitasecond
 
 ## 🕛 Await forTime _([setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) equivalent)_
 
-In JavaScript there is very elegant syntax to write asynchronous code with **async/await**. Every internal function and library is heading forward to be compatible with Promises and deprecating its old callback type.  
+In JavaScript, there is an elegant way how to write asynchronous code with **async/await** syntax construct. Every internal function and library is heading forward to be compatible with Promises and deprecating its old callback type.  
 But there are some **relicts from [callback hell](http://callbackhell.com/)** like **setTimeout, requestAnimationFrame,...**. Waitasecond has motivation to turn this into elegant syntax:
 
 ```typescript
 import { forTime } from 'waitasecond';
 
-console.log(`⏳ This is logged immediatelly.`);
+console.log(`⏳ This is logged immediately.`);
 await forTime(500);
-console.log(`⌛ And this after 500 miliseconds.`);
+console.log(`⌛ And this after 500 milliseconds.`);
 await forTime(666);
 console.log(`😈 Wow, I have escaped from callback hell`);
 ```
@@ -53,8 +53,8 @@ await doSomething();
 // 🍎 bar
 ```
 
-_Note: Despite window.setImmediate is non-standard feature and it is not working in node, function **forImmediate is working in all environments**_
-_Note: If you want to use equivalent of [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval), see [https://rxjs.dev/api/index/function/interval)._
+_Note: Despite window.setImmediate is a non-standard feature and it is not working in node, function **forImmediate is working in all environments**_
+_Note: If you want to use an equivalent of [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval), see [https://rxjs.dev/api/index/function/interval)._
 
 ## 🕐 Await forAnimationFrame _([requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) equivalent)_
 
@@ -64,7 +64,7 @@ With forAnimationFrame you can write nice looking **render**/update/whatever **l
 import { forAnimationFrame } from 'waitasecond';
 
 while (
-    true /* ← Normally this would be 💩 code but with forAnimationFrame it is nicer syntax version of requestAnimationFrame*/
+    true /* ← Normally, this would be 💩 code, but with forAnimationFrame it is a nicer syntax version of requestAnimationFrame*/
 ) {
     const now = await forAnimationFrame();
 
@@ -73,11 +73,11 @@ while (
 }
 ```
 
-_Note: This is working only in browser environment._
+_Note: This is working only in a browser environment._
 
 ## 🕜 Await forEver
 
-Returns promise which never resolves or rejects. It is elegant way to test what happen if some part of async code stucks (for example some fetch call).
+forEver function returns a promise which never resolves or rejects. It is an elegant way to test what happened if some part of asynchronous code stuck (for example, fetch call).
 
 ```typescript
 import { forEver } from 'waitasecond';
@@ -88,7 +88,8 @@ console.log(`🧟 This will never ever happen.`);
 
 ## 🕑 Await forTimeSynced
 
-**forTimeSynced** is ideal way how to do periodical ticking with unstable environment which is randomly restarted. For example if you want to run some process every 10 minutes on server but server can be restarted by some instace manager like PM2.
+**forTimeSynced** is an ideal way how to do periodical ticking in an unstable environment.
+For example, if you want to run a process every 10 minutes on a server, but PM2 is restarting a server unexpectedly.
 
 ```typescript
 import { forTimeSynced } from 'waitasecond';
@@ -109,7 +110,7 @@ import { forValueDefined } from 'waitasecond';
 const firstName = forValueDefined(() => data.firstName);
 ```
 
-_Note: This is not definitelly ideal way how to wait for things. But it can be helpfull if you want to "observe" some mutating object which do not support it natively._
+_Note: This is not definitely the ideal way how to wait for things. But it can be helpful if you want to "observe" some mutating object which do not support it natively._
 
 ## 🕒 Await forAllImagesInElement
 
@@ -126,4 +127,4 @@ await renderToPdf(document.body);
 
 # 🖋️ Contributing
 
-I am opened to your pull requests, feedback, suggestions and donations. Contact to me is on my [personal page](https://www.pavolhejny.com)
+I am opened to your pull requests, feedback, suggestions, and donations. Contact to me is on my [personal page](https://www.pavolhejny.com)
