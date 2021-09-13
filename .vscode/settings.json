@@ -1,0 +1,15 @@
+{
+    "files.eol": "\n",
+    "jestrunner.jestCommand": "npm run test-unit --",
+    "eslint.options": { "configFile": ".eslintrc.js" },
+    "editor.formatOnSave": true,
+    "prettier.configPath": ".prettierrc",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "html.autoClosingTags": false,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+
+    "grammarly.domain": "technical",
+    "grammarly.userWords": ["Waitasecond", "waitasecond"]
+}

@@ -5,6 +5,7 @@
 .idea
 .vscode/*
 !.vscode/terminals.json
+!.vscode/settings.json
 
 node_modules
 
