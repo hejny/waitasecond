@@ -22,7 +22,7 @@
         "prettier": "prettier --config .prettierrc --write \"{src,test,.vscode}/**/*.{ts,json}\"",
         "pretty-imports": "npx organize-imports-cli tsconfig.json",
         "prettier-commit": "git diff --exit-code && npm run pretty-imports && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
-        "documentation": "typedoc --excludePrivate --hideGenerator --mode file --theme minimal --out docs --name \"Waitasecond\" ./src",
+        "documentation": "typedoc",
         "documentation-commit": "git diff --exit-code && npm run documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
         "lint": "tslint -p tsconfig.json",
         "generate-main-exports": "ts-node --project ./scripts/generate-main-exports/tsconfig.json ./scripts/generate-main-exports/generate-main-exports.ts",

@@ -13,6 +13,17 @@
         "esModuleInterop": true,
         "skipLibCheck": true
     },
+    "typedocOptions": {
+        "name": "Waitasecond",
+        "entryPoints": ["./src/main.ts"],
+        "exclude": [],
+        "excludePrivate": true,
+        "includeVersion": true,
+        "hideGenerator": true,
+        "theme": "minimal",
+        "out": "./docs",
+        "gitRemote": "https://github.com/hejny/waitasecond"
+    },
     "include": ["src"],
     "exclude": ["scripts", "samples", "test"]
 }
