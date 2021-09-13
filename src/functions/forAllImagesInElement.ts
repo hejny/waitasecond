@@ -5,6 +5,7 @@ TODO: !!! rejectWhenNotLoaded by chaining
 TODO: !!! Corrupted images into samples
 TODO: !!! Also with media and pictures
 TODO: !!! Universal for every loadable think
+TODO: !!! Also start new wait when  new images appears / disappears during the wait
 TODO: Verbose mode for console.info
 */
 

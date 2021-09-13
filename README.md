@@ -77,7 +77,7 @@ _Note: This is working only in browser environment._
 
 ## 🕜 Await forEver
 
-Never resolves or rejects. It is elegant way to test what happen if some part of async code stucks (for example some fetch call).
+Returns promise which never resolves or rejects. It is elegant way to test what happen if some part of async code stucks (for example some fetch call).
 
 ```typescript
 import { forEver } from 'waitasecond';
@@ -87,6 +87,8 @@ console.log(`🧟 This will never ever happen.`);
 ```
 
 ## 🕑 Await forTimeSynced
+
+**forTimeSynced** is ideal way how to do periodical ticking with unstable environment which is randomly restarted. For example if you want to run some process every 10 minutes on server but server can be restarted by some instace manager like PM2.
 
 ```typescript
 import { forTimeSynced } from 'waitasecond';
@@ -104,17 +106,24 @@ while (true) {
 ```typescript
 import { forValueDefined } from 'waitasecond';
 
-// TODO: !!!
+const firstName = forValueDefined(() => data.firstName);
 ```
+
+_Note: This is not definitelly ideal way how to wait for things. But it can be helpfull if you want to "observe" some mutating object which do not support it natively._
 
 ## 🕒 Await forAllImagesInElement
 
 ```typescript
 import { forAllImagesInElement } from 'waitasecond';
 
-// TODO: !!!
+await forAllImagesInElement(document.body);
+console.log(`🖼️ Now I can be sure that all images in body are loaded.`);
+
+// ...
+await renderToPdf(document.body);
+// ...
 ```
 
 # 🖋️ Contributing
 
-I am opened to your pull requests, feedback, suggestions and donations :) . Contact to me is on my [personal page](https://www.pavolhejny.com)
+I am opened to your pull requests, feedback, suggestions and donations. Contact to me is on my [personal page](https://www.pavolhejny.com)
