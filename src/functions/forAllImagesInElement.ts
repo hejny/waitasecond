@@ -8,6 +8,8 @@ TODO: !!! Universal for every loadable think
 TODO: Verbose mode for console.info
 */
 
+// tslint:disable:no-console
+
 export function forAllImagesInElement(element: HTMLElement): Promise<void> {
     return Promise.all<void>(
         Array.from(element.querySelectorAll('img')).map((imgElement, i) => {
