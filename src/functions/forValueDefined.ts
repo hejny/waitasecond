@@ -1,5 +1,5 @@
-import { forTime } from './forTime.js';
 import { AsyncOrSync } from 'ts-essentials';
+import { forTime } from './forTime.js';
 
 // TODO: !!! Options style in func params everywhere
 export async function forValueDefined<T>(
