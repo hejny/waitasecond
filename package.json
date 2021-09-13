@@ -28,8 +28,8 @@
         "lint": "tslint -p tsconfig.json",
         "generate-main-exports": "ts-node --project ./scripts/generate-main-exports/tsconfig.json ./scripts/generate-main-exports/generate-main-exports.ts",
         "generate-main-exports-commit": "git diff --exit-code && npm run generate-main-exports && npm run prettier && git add src && git commit --allow-empty -m \"Updating exports\"",
-        "preversion": "npm run lint && npm test && npm run generate-main-exports-commit && npm run build && npm run prettier-commit && npm run generate-documentation-commit",
-        "postversion": "git push && git push --tags && npm publish"
+        "preversion": "npm run lint && npm test && npm run generate-main-exports-commit && npm run build && npm run prettier-commit",
+        "postversion": "npm run generate-documentation-commit && git push && git push --tags && npm publish"
     },
     "repository": {
         "type": "git",
