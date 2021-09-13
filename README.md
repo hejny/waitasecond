@@ -25,6 +25,9 @@ await forTime(666);
 console.log(`😈 Wow, I have escaped from callback hell`);
 ```
 
+[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forTime)
+[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forTime.ts)
+
 ## 🕧 Await forImmediate _([setImmediate](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) equivalent)_
 
 ```typescript
@@ -54,7 +57,10 @@ await doSomething();
 ```
 
 _Note: Despite window.setImmediate is a non-standard feature and it is not working in node, function **forImmediate is working in all environments**_
-_Note: If you want to use an equivalent of [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval), see [https://rxjs.dev/api/index/function/interval)._
+_Note: If you want to use an equivalent of [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval), see [RxJS interval](https://rxjs.dev/api/index/function/interval)._
+
+[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forImmediate)
+[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forImmediate.ts)
 
 ## 🕐 Await forAnimationFrame _([requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) equivalent)_
 
@@ -75,6 +81,9 @@ while (
 
 _Note: This is working only in a browser environment._
 
+[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forAnimationFrame)
+[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forAnimationFrame.ts)
+
 ## 🕜 Await forEver
 
 forEver function returns a promise which never resolves or rejects. It is an elegant way to test what happened if some part of asynchronous code stuck (for example, fetch call).
@@ -85,6 +94,9 @@ import { forEver } from 'waitasecond';
 await forEver();
 console.log(`🧟 This will never ever happen.`);
 ```
+
+[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forEver)
+[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forEver.ts)
 
 ## 🕑 Await forTimeSynced
 
@@ -102,6 +114,9 @@ while (true) {
 }
 ```
 
+[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forTimeSynced)
+[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forTimeSynced.ts)
+
 ## 🕝 Await forValueDefined
 
 ```typescript
@@ -111,6 +126,9 @@ const firstName = forValueDefined(() => data.firstName);
 ```
 
 _Note: This is not definitely the ideal way how to wait for things. But it can be helpful if you want to "observe" some mutating object which do not support it natively._
+
+[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forValueDefined)
+[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forValueDefined.ts)
 
 ## 🕒 Await forAllImagesInElement
 
@@ -124,6 +142,9 @@ console.log(`🖼️ Now I can be sure that all images in body are loaded.`);
 await renderToPdf(document.body);
 // ...
 ```
+
+[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forAllImagesInElement)
+[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forAllImagesInElement.ts)
 
 # 🖋️ Contributing
 
