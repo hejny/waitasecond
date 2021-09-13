@@ -10,7 +10,7 @@ Install from [NPM](https://www.npmjs.com/package/waitasecond)
 npm i waitasecond
 ```
 
-# 🕛 Await forTime _([setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) equivalent)_
+## 🕛 Await forTime _([setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) equivalent)_
 
 In JavaScript there is very elegant syntax to write asynchronous code with **async/await**. Every internal function and library is heading forward to be compatible with Promises and deprecating its old callback type.  
 But there are some **relicts from [callback hell](http://callbackhell.com/)** like **setTimeout, requestAnimationFrame,...**. Waitasecond has motivation to turn this into elegant syntax:
@@ -25,7 +25,7 @@ await forTime(666);
 console.log(`😈 Wow, I have escaped from callback hell`);
 ```
 
-🕧 Await forImmediate _([setImmediate](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) equivalent)_
+## 🕧 Await forImmediate _([setImmediate](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) equivalent)_
 
 ```typescript
 import { forImmediate } from 'waitasecond';
@@ -56,7 +56,7 @@ await doSomething();
 _Note: Despite window.setImmediate is non-standard feature and it is not working in node, function **forImmediate is working in all environments**_
 _Note: If you want to use equivalent of [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval), see [https://rxjs.dev/api/index/function/interval)._
 
-🕐 Await forAnimationFrame _([requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) equivalent)_
+## 🕐 Await forAnimationFrame _([requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) equivalent)_
 
 With forAnimationFrame you can write nice looking **render**/update/whatever **loops**.
 
@@ -75,7 +75,7 @@ while (
 
 _Note: This is working only in browser environment._
 
-🕜 Await forEver
+## 🕜 Await forEver
 
 Never resolves or rejects. It is elegant way to test what happen if some part of async code stucks (for example some fetch call).
 
@@ -86,7 +86,7 @@ await forEver();
 console.log(`🧟 This will never ever happen.`);
 ```
 
-🕑 Await forTimeSynced
+## 🕑 Await forTimeSynced
 
 ```typescript
 import { forTimeSynced } from 'waitasecond';
@@ -99,7 +99,7 @@ while (true) {
 }
 ```
 
-🕝 Await forValueDefined
+## 🕝 Await forValueDefined
 
 ```typescript
 import { forValueDefined } from 'waitasecond';
@@ -107,7 +107,7 @@ import { forValueDefined } from 'waitasecond';
 // TODO: !!!
 ```
 
-🕒 Await forAllImagesInElement
+## 🕒 Await forAllImagesInElement
 
 ```typescript
 import { forAllImagesInElement } from 'waitasecond';
