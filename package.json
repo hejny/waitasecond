@@ -9,7 +9,8 @@
         "dist/**"
     ],
     "exports": {
-        "functions": "./dist/functions/"
+        ".": "./dist/main.js",
+        "./*": "./dist/functions/*.js"
     },
     "scripts": {
         "test": "npm run test-unit && npm run test-integration",
