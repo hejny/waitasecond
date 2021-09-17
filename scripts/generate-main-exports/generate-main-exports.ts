@@ -68,5 +68,6 @@ async function main() {
 }
 
 /**
+ * TODO: Generate also exports and typesVersions in package.json
  * TODO: This should be an indipendent lib
  */
