@@ -1,6 +1,6 @@
 {
     "name": "waitasecond",
-    "version": "1.8.8",
+    "version": "1.8.9",
     "description": "Simple tool library for the waiting using Promises.",
     "sideEffects": false,
     "main": "./dist/main.js",
