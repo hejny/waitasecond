@@ -1,29 +1,40 @@
 {
-    "compilerOptions": {
-        "target": "es3",
-        "module": "commonjs",
-        "declaration": true,
-        "sourceMap": true,
-        "outDir": "./dist",
-        "alwaysStrict": true,
-        "forceConsistentCasingInFileNames": true,
-        "lib": ["dom", "es2017"],
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true
-    },
-    "typedocOptions": {
-        "name": "Waitasecond",
-        "entryPoints": ["./src/main.ts"],
-        "exclude": [],
-        "excludePrivate": true,
-        "includeVersion": true,
-        "hideGenerator": true,
-        "out": "./docs",
-        "gitRemote": "https://github.com/hejny/waitasecond"
-    },
-    "include": ["src"],
-    "exclude": ["scripts", "samples", "test"]
+  "compilerOptions": {
+    "target": "es3",
+    "module": "commonjs",
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "typedocOptions": {
+    "name": "Waitasecond",
+    "entryPoints": [
+      "./src/main.ts"
+    ],
+    "exclude": [],
+    "excludePrivate": true,
+    "includeVersion": true,
+    "hideGenerator": true,
+    "out": "./docs",
+    "gitRemote": "https://github.com/hejny/waitasecond"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "scripts",
+    "samples",
+    "test"
+  ]
 }
