@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'path';
 import serveIndex from 'serve-index';
 import serveStatic from 'serve-static';
-import { forTime } from '../../src/functions/forTime';
+import { forTimeout } from '../../src/for/basic/forTimeout';
 // import opn from 'open';
 
 // TODO: !!! Uninstall express-throttle-bandwidth
@@ -27,7 +27,7 @@ app.use(async (request, response, next) => {
                 .status(400)
                 .send(`Query parameter "throttle" should be valid number.`);
         }
-        await forTime(throttle);
+        await forTimeout(throttle);
     }
     return next();
 });

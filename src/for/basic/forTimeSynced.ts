@@ -1,5 +1,3 @@
-import { forTime } from './forTime.js';
-
 /**
  * This waiter function will sync some action to some precise time
  * @param period looping period in milliseconds
@@ -11,7 +9,7 @@ export async function forTimeSynced(
 ): Promise<void> {
     const currentTime = new Date().getTime();
     const wait = period - ((currentTime - shift) % period);
-    await forTime(wait);
+    await forTimeout(wait);
 }
 
 // TODO: !!! Human readable forTimeSynced (it is somewhere already implemented)

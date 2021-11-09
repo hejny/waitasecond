@@ -1,17 +1,8 @@
-/*
-TODO: !!! Rename forImagesReady, forMediaReady
-TODO: !!! Timeout by chaining
-TODO: !!! rejectWhenNotLoaded by chaining
-TODO: !!! Corrupted images into samples
-TODO: !!! Also with media and pictures
-TODO: !!! Universal for every loadable think
-TODO: !!! Also start new wait when  new images appears / disappears during the wait
-TODO: Verbose mode for console.info
-*/
-
 // tslint:disable:no-console
 
-export function forAllImagesInElement(element: HTMLElement): Promise<void> {
+// TODO: !!! Verbose in IForImagesReadyOptions
+
+export function forImagesReady(element: HTMLElement): Promise<void> {
     return Promise.all<void>(
         Array.from(element.querySelectorAll('img')).map((imgElement, i) => {
             return new Promise((resolve, reject) => {
@@ -48,3 +39,12 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
         /* Note: Returning void */
     });
 }
+
+/*
+TODO: Timeout by chaining
+TODO: Corrupted images into samples
+TODO: Also with media and pictures
+TODO: Universal for every loadable think
+TODO: Also start new wait when  new images appears / disappears during the wait
+TODO: Verbose mode for console.info
+*/
