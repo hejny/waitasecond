@@ -10,18 +10,18 @@ Install from [NPM](https://www.npmjs.com/package/waitasecond)
 npm i waitasecond
 ```
 
-## 🕛 Await forTime _([setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) equivalent)_
+## 🕛 Await forTimeout _([setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) equivalent)_
 
-In JavaScript, there is an elegant way how to write asynchronous code with **async/await** syntax construct. Every internal function and library is heading forward to be compatible with Promises and deprecating its old callback type.  
+In JavaScript, there is an elegant way how to write asynchronous code with **async/await** syntax construct. Every internal function and library is heading forward to be compatible with Promises and deprecating its old callback type.
 But there are some **relicts from [callback hell](http://callbackhell.com/)** like **setTimeout, requestAnimationFrame,...**. Waitasecond has motivation to turn this into elegant syntax:
 
 ```typescript
-import { forTime } from 'waitasecond';
+import { forTimeout } from 'waitasecond/forTimeout';
 
 console.log(`⏳ This is logged immediately.`);
-await forTime(500);
+await forTimeout(500);
 console.log(`⌛ And this after 500 milliseconds.`);
-await forTime(666);
+await forTimeout(666);
 console.log(`😈 Wow, I have escaped from callback hell`);
 ```
 
@@ -31,7 +31,7 @@ console.log(`😈 Wow, I have escaped from callback hell`);
 ## 🕧 Await forImmediate _([setImmediate](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) equivalent)_
 
 ```typescript
-import { forImmediate } from 'waitasecond';
+import { forImmediate } from 'waitasecond/forImmediate';
 
 async function doSomething() {
     console.log(`🍏 foo`);
@@ -67,7 +67,7 @@ _Note: If you want to use an equivalent of [setInterval](https://developer.mozil
 With forAnimationFrame you can write nice looking **render**/update/whatever **loops**.
 
 ```typescript
-import { forAnimationFrame } from 'waitasecond';
+import { forAnimationFrame } from 'waitasecond/forAnimationFrame';
 
 while (
     true /* ← Normally, this would be 💩 code, but with forAnimationFrame it is a nicer syntax version of requestAnimationFrame*/
@@ -89,7 +89,7 @@ _Note: This is working only in a browser environment._
 forEver function returns a promise which never resolves or rejects. It is an elegant way to test what happened if some part of asynchronous code stuck (for example, fetch call).
 
 ```typescript
-import { forEver } from 'waitasecond';
+import { forEver } from 'waitasecond/forEver';
 
 await forEver();
 console.log(`🧟 This will never ever happen.`);
@@ -104,7 +104,7 @@ console.log(`🧟 This will never ever happen.`);
 For example, if you want to run a process every 10 minutes on a server, but PM2 is restarting a server unexpectedly.
 
 ```typescript
-import { forTimeSynced } from 'waitasecond';
+import { forTimeSynced } from 'waitasecond/forTimeSynced';
 
 while (true) {
     await forTimeSynced(10 /* Minutes */ * 60 * 1000);
@@ -120,7 +120,7 @@ while (true) {
 ## 🕝 Await forValueDefined
 
 ```typescript
-import { forValueDefined } from 'waitasecond';
+import { forValueDefined } from 'waitasecond/forValueDefined';
 
 const firstName = forValueDefined(() => data.firstName);
 ```
@@ -130,12 +130,12 @@ _Note: This is not definitely the ideal way how to wait for things. But it can b
 [📖Documentation](https://hejny.github.io/waitasecond/modules.html#forValueDefined)
 [💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forValueDefined.ts)
 
-## 🕒 Await forAllImagesInElement
+## 🕒 Await forImagesReady
 
 ```typescript
-import { forAllImagesInElement } from 'waitasecond';
+import { forImagesReady } from 'waitasecond/forImagesReady';
 
-await forAllImagesInElement(document.body);
+await forImagesReady(document.body);
 console.log(`🖼️ Now I can be sure that all images in body are loaded.`);
 
 // ...
@@ -143,8 +143,8 @@ await renderToPdf(document.body);
 // ...
 ```
 
-[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forAllImagesInElement)
-[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forAllImagesInElement.ts)
+[📖Documentation](https://hejny.github.io/waitasecond/modules.html#forImagesReady)
+[💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forImagesReady.ts)
 
 # 🖋️ Contributing
 

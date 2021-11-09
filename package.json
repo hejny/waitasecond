@@ -5,53 +5,6 @@
     "sideEffects": false,
     "main": "./dist/main.js",
     "types": "./dist/main.d.ts",
-    "exports": {
-        ".": "./dist/main.js",
-        "./forAllImagesInElement": "./dist/functions/forAllImagesInElement.js",
-        "./forAnimationFrame": "./dist/functions/forAnimationFrame.js",
-        "./forDocumentLoad": "./dist/functions/forDocumentLoad.js",
-        "./forDOMContentLoaded": "./dist/functions/forDOMContentLoaded.js",
-        "./forEver": "./dist/functions/forEver.js",
-        "./forImmediate": "./dist/functions/forImmediate.js",
-        "./forTime": "./dist/functions/forTime.js",
-        "./forTimeout": "./dist/functions/forTimeout.js",
-        "./forTimeSynced": "./dist/functions/forTimeSynced.js",
-        "./forValueDefined": "./dist/functions/forValueDefined.js"
-    },
-    "typesVersions": {
-        "*": {
-            "./forAllImagesInElement": [
-                "./dist/functions/forAllImagesInElement.d.ts"
-            ],
-            "./forAnimationFrame": [
-                "./dist/functions/forAnimationFrame.d.ts"
-            ],
-            "./forDocumentLoad": [
-                "./dist/functions/forDocumentLoad.d.ts"
-            ],
-            "./forDOMContentLoaded": [
-                "./dist/functions/forDOMContentLoaded.d.ts"
-            ],
-            "./forEver": [
-                "./dist/functions/forEver.d.ts"
-            ],
-            "./forImmediate": [
-                "./dist/functions/forImmediate.d.ts"
-            ],
-            "./forTime": [
-                "./dist/functions/forTime.d.ts"
-            ],
-            "./forTimeout": [
-                "./dist/functions/forTimeout.d.ts"
-            ],
-            "./forTimeSynced": [
-                "./dist/functions/forTimeSynced.d.ts"
-            ],
-            "./forValueDefined": [
-                "./dist/functions/forValueDefined.d.ts"
-            ]
-        }
-    },
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com:hejny/waitasecond.git"
@@ -106,5 +59,68 @@
         "type-fest": "^2.5.3",
         "typedoc": "^0.22.3",
         "typescript": "^4.4.3"
+    },
+    "exports": {
+        ".": "./dist/main.js",
+        "./ITime": "./dist/interfaces/ITime.js",
+        "./IHour": "./dist/interfaces/ITime.js",
+        "./IMinute": "./dist/interfaces/ITime.js",
+        "./forEver": "./dist/for/basic/forEver.js",
+        "./forDate": "./dist/for/basic/forDate.js",
+        "./forTimeout": "./dist/for/basic/forTimeout.js",
+        "./forTimeInDay": "./dist/for/basic/forTimeInDay.js",
+        "./forImmediate": "./dist/for/basic/forImmediate.js",
+        "./forTimeSynced": "./dist/for/basic/forTimeSynced.js",
+        "./forImagesReady": "./dist/for/browser/forImagesReady.js",
+        "./forDocumentLoad": "./dist/for/browser/forDocumentLoad.js",
+        "./forValueDefined": "./dist/for/basic/forValueDefined.js",
+        "./forAnimationFrame": "./dist/for/browser/forAnimationFrame.js",
+        "./forDOMContentLoaded": "./dist/for/browser/forDOMContentLoaded.js"
+    },
+    "typesVersions": {
+        "*": {
+            "./ITime": [
+                "./dist/interfaces/ITime.d.ts"
+            ],
+            "./IHour": [
+                "./dist/interfaces/ITime.d.ts"
+            ],
+            "./IMinute": [
+                "./dist/interfaces/ITime.d.ts"
+            ],
+            "./forEver": [
+                "./dist/for/basic/forEver.d.ts"
+            ],
+            "./forDate": [
+                "./dist/for/basic/forDate.d.ts"
+            ],
+            "./forTimeout": [
+                "./dist/for/basic/forTimeout.d.ts"
+            ],
+            "./forTimeInDay": [
+                "./dist/for/basic/forTimeInDay.d.ts"
+            ],
+            "./forImmediate": [
+                "./dist/for/basic/forImmediate.d.ts"
+            ],
+            "./forTimeSynced": [
+                "./dist/for/basic/forTimeSynced.d.ts"
+            ],
+            "./forImagesReady": [
+                "./dist/for/browser/forImagesReady.d.ts"
+            ],
+            "./forDocumentLoad": [
+                "./dist/for/browser/forDocumentLoad.d.ts"
+            ],
+            "./forValueDefined": [
+                "./dist/for/basic/forValueDefined.d.ts"
+            ],
+            "./forAnimationFrame": [
+                "./dist/for/browser/forAnimationFrame.d.ts"
+            ],
+            "./forDOMContentLoaded": [
+                "./dist/for/browser/forDOMContentLoaded.d.ts"
+            ]
+        }
     }
 }
