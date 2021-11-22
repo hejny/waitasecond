@@ -1,11 +1,10 @@
+/.github
+/.vscode
+/.idea
 /coverage
-
-# IDEs
-.idea
-.vscode/*
-
-node_modules
-
+/src
+/node_modules
+/samples
 
 .~lock*
-
+/secrets.md
