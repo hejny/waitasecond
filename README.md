@@ -2,7 +2,7 @@
 
 Wait a second is an extremely simple and elegant tool for using **working with async code and [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)**. It is usable by browser, worker, and node environment and fully typed.
 
-# 🔥 Install
+## 🔥 Install
 
 Install from [NPM](https://www.npmjs.com/package/waitasecond)
 
@@ -10,7 +10,7 @@ Install from [NPM](https://www.npmjs.com/package/waitasecond)
 npm i waitasecond
 ```
 
-## 🕛 Await forTime _([setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) equivalent)_
+### 🕛 Await forTime _([setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) equivalent)_
 
 In JavaScript, there is an elegant way how to write asynchronous code with **async/await** syntax construct. Every internal function and library is heading forward to be compatible with Promises and deprecating its old callback type.  
 But there are some **relicts from [callback hell](http://callbackhell.com/)** like **setTimeout, requestAnimationFrame,...**. Waitasecond has motivation to turn this into elegant syntax:
@@ -28,7 +28,7 @@ console.log(`😈 Wow, I have escaped from callback hell`);
 [📖Documentation](https://hejny.github.io/waitasecond/modules.html#forTime)
 [💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forTime.ts)
 
-## 🕧 Await forImmediate _([setImmediate](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) equivalent)_
+### 🕧 Await forImmediate _([setImmediate](https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate) equivalent)_
 
 ```typescript
 import { forImmediate } from 'waitasecond';
@@ -62,7 +62,7 @@ _Note: If you want to use an equivalent of [setInterval](https://developer.mozil
 [📖Documentation](https://hejny.github.io/waitasecond/modules.html#forImmediate)
 [💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forImmediate.ts)
 
-## 🕐 Await forAnimationFrame _([requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) equivalent)_
+### 🕐 Await forAnimationFrame _([requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) equivalent)_
 
 With forAnimationFrame you can write nice looking **render**/update/whatever **loops**.
 
@@ -84,7 +84,7 @@ _Note: This is working only in a browser environment._
 [📖Documentation](https://hejny.github.io/waitasecond/modules.html#forAnimationFrame)
 [💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forAnimationFrame.ts)
 
-## 🕜 Await forEver
+### 🕜 Await forEver
 
 forEver function returns a promise which never resolves or rejects. It is an elegant way to test what happened if some part of asynchronous code stuck (for example, fetch call).
 
@@ -98,7 +98,7 @@ console.log(`🧟 This will never ever happen.`);
 [📖Documentation](https://hejny.github.io/waitasecond/modules.html#forEver)
 [💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forEver.ts)
 
-## 🕑 Await forTimeSynced
+### 🕑 Await forTimeSynced
 
 **forTimeSynced** is an ideal way how to do periodical ticking in an unstable environment.
 For example, if you want to run a process every 10 minutes on a server, but PM2 is restarting a server unexpectedly.
@@ -148,4 +148,30 @@ await renderToPdf(document.body);
 
 # 🖋️ Contributing
 
-I am opened to your pull requests, feedback, suggestions, and donations. Contact to me is on my [personal page](https://www.pavolhejny.com)
+I am opened to pull requests, feedback and suggestions. Or if you like this utility, you can just [buy me a coffee](https://www.buymeacoffee.com/hejny) ☕
+
+
+## ✨ Partners
+
+
+<a href="https://Collboard.com/">
+    <img src="https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.12.1/logo-small.png" alt="Collboard logo" width="50"  />
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://czech.events/">
+    <img src="https://czech.events/design/logos/czech.events.transparent-logo.png" alt="Czech.events logo" width="50" />
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://sigmastamp.ml/">
+    <img src="https://www.sigmastamp.ml/sigmastamp-logo.white.svg" alt="SigmaStamp logo" width="50"/>
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://www.h-edu.org/">
+    <img src="https://www.h-edu.org/media/favicon.png" alt="H-edu logo" width="50"/>
+</a>
+
+
+[Became a partner](mailto:me+waitasecond@pavolhejny.com)
+
+
+
