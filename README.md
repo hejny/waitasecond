@@ -171,7 +171,7 @@ I am opened to pull requests, feedback and suggestions. Or if you like this util
 </a>
 
 
-[Became a partner](mailto:me+waitasecond@pavolhejny.com)
+[Become a partner](https://www.pavolhejny.com/contact/)
 
 
 
