@@ -146,9 +146,9 @@ await renderToPdf(document.body);
 [📖Documentation](https://hejny.github.io/waitasecond/modules.html#forAllImagesInElement)
 [💻Code](https://github.com/hejny/waitasecond/blob/main/src/functions/forAllImagesInElement.ts)
 
-# 🖋️ Contributing
+## 🖋️ Contributing
 
-I am opened to pull requests, feedback and suggestions. Or if you like this utility, you can just [buy me a coffee](https://www.buymeacoffee.com/hejny) ☕
+I am opened to pull requests, feedback and suggestions. Or if you like this utility, you can [☕ buy me a coffee](https://www.buymeacoffee.com/hejny) or [donate via cryptocurrencies](https://github.com/hejny/hejny/blob/main/documents/crypto.md)
 
 
 ## ✨ Partners
