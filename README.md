@@ -2,8 +2,9 @@
 
 <!--Badges-->
 
- [![Package Quality](https://packagequality.com/shield/waitasecond.svg)](https://packagequality.com/#?package=waitasecond)
- [![License](https://img.shields.io/github/license/hejny/waitasecond.svg?style=flat)](https://raw.githubusercontent.com/hejny/waitasecond/master/LICENSE)
+ [![License of ⏰ Waitasecond](https://img.shields.io/github/license/hejny/waitasecond.svg?style=flat)](https://raw.githubusercontent.com/hejny/waitasecond/master/LICENSE)
+ [![NPM Version of ⏰ Waitasecond](https://badge.fury.io/js/waitasecond.svg)](https://www.npmjs.com/package/waitasecond)
+ [![Quality of package ⏰ Waitasecond](https://packagequality.com/shield/waitasecond.svg)](https://packagequality.com/#?package=waitasecond)
  [![Known Vulnerabilities](https://snyk.io/test/github/hejny/waitasecond/badge.svg)](https://snyk.io/test/github/hejny/waitasecond)
  [![Issues](https://img.shields.io/github/issues/hejny/waitasecond.svg?style=flat)](https://github.com/hejny/waitasecond/issues)
  [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
