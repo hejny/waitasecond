@@ -2,7 +2,7 @@
 
 <!--Badges-->
 
- [![License of ⏰ Waitasecond](https://img.shields.io/github/license/hejny/waitasecond.svg?style=flat)](https://raw.githubusercontent.com/hejny/waitasecond/master/LICENSE)
+ [![License of ⏰ Waitasecond](https://img.shields.io/github/license/hejny/waitasecond.svg?style=flat)](https://github.com/hejny/waitasecond/blob/main/LICENSE)
  [![NPM Version of ⏰ Waitasecond](https://badge.fury.io/js/waitasecond.svg)](https://www.npmjs.com/package/waitasecond)
  [![Quality of package ⏰ Waitasecond](https://packagequality.com/shield/waitasecond.svg)](https://packagequality.com/#?package=waitasecond)
  [![Known Vulnerabilities](https://snyk.io/test/github/hejny/waitasecond/badge.svg)](https://snyk.io/test/github/hejny/waitasecond)
