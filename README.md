@@ -45,9 +45,9 @@ console.log(`😈 Wow, I have escaped from callback hell`);
 import { forImmediate } from 'waitasecond';
 
 async function doSomething() {
-    console.log(`🍏 foo`);
-    await forImmediate();
-    console.log(`🍎 bar`);
+console.log(`🍏 foo`);
+await forImmediate();
+console.log(`🍎 bar`);
 }
 
 doSomething();
@@ -81,12 +81,12 @@ With forAnimationFrame you can write nice looking **render**/update/whatever **l
 import { forAnimationFrame } from 'waitasecond';
 
 while (
-    true /* ← Normally, this would be 💩 code, but with forAnimationFrame it is a nicer syntax version of requestAnimationFrame*/
+true /* ← Normally, this would be 💩 code, but with forAnimationFrame it is a nicer syntax version of requestAnimationFrame*/
 ) {
-    const now = await forAnimationFrame();
+const now = await forAnimationFrame();
 
-    updateScene(now);
-    renderScene(now);
+updateScene(now);
+renderScene(now);
 }
 ```
 
@@ -118,10 +118,10 @@ For example, if you want to run a process every 10 minutes on a server, but PM2 
 import { forTimeSynced } from 'waitasecond';
 
 while (true) {
-    await forTimeSynced(10 /* Minutes */ * 60 * 1000);
-    console.log(
-        `⌛ This will be logged every 10 minutes according to computer time. So it fires for example on 12:00, 12:10, 12:20,...`,
-    );
+await forTimeSynced(10 /* Minutes */ * 60 * 1000);
+console.log(
+`⌛ This will be logged every 10 minutes according to computer time. So it fires for example on 12:00, 12:10, 12:20,...`,
+);
 }
 ```
 
@@ -168,3 +168,13 @@ await renderToPdf(document.body);
 
 
 
+
+
+
+<!--Contributing-->
+
+## 🖋️ Contributing
+
+I am open to pull requests, feedback, and suggestions. Or if you like this utility, you can [☕ buy me a coffee](https://www.buymeacoffee.com/hejny) or [donate via cryptocurrencies](https://github.com/hejny/hejny/blob/main/documents/crypto.md).
+
+<!--/Contributing-->
