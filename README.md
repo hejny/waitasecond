@@ -1,5 +1,7 @@
 # ⏰ Waitasecond
 
+[![Test + Lint](https://github.com/hejny/waitasecond/actions/workflows/test+lint.yml/badge.svg)](https://github.com/hejny/waitasecond/actions/workflows/test+lint.yml)
+
 Wait a second is an extremely simple and elegant tool for using **working with async code and [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)**. It is usable by browser, worker, and node environment and fully typed.
 
 # 🔥 Install

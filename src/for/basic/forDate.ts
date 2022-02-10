@@ -10,5 +10,6 @@ export async function forDate(date: Date): Promise<void> {
     await forTimeout(remainingMiliseconds);
 }
 
+// !!! Documentation for every exported entity
 // !!! To samples
 // !!! To README
