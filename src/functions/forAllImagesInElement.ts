@@ -17,24 +17,26 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
             return new Promise((resolve, reject) => {
                 if (imgElement.complete) {
                     if (imgElement.naturalHeight === 0) {
+                        /*
                         console.info(
                             `Image ${i} rejected due to 0 naturalHeight`,
                         );
+                        */
 
                         // TODO: !!! Check this also in load
                         reject(imgElement);
                     } else {
-                        console.info(`Image ${i} is already completed`);
+                        // console.info(`Image ${i} is already completed`);
                         resolve();
                     }
                 }
 
                 imgElement.addEventListener('load', () => {
-                    console.info(`Image ${i} resolved`);
+                    // console.info(`Image ${i} resolved`);
                     resolve();
                 });
                 imgElement.addEventListener('error', () => {
-                    console.info(`Image ${i} rejected`);
+                    // console.info(`Image ${i} rejected`);
                     // TODO: !!! imgElement into ImageError
                     reject(
                         new Error(
@@ -48,3 +50,7 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
         /* Note: Returning void */
     });
 }
+
+/**
+ * TODO: !!! forAllImagesInElement should be able to recieve an <img> element
+ */
