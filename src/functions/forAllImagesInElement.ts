@@ -41,11 +41,7 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
                     imageElement.addEventListener('error', () => {
                         // console.info(`Image ${i} rejected`);
                         // TODO: !!! imgElement into ImageError
-                        reject(
-                            new Error(
-                                `Some images can\`t be loaded.`,
-                            ),
-                        );
+                        reject(new Error(`Some images can\`t be loaded.`));
                     });
                 });
             },
