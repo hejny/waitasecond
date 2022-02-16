@@ -14,10 +14,12 @@ TODO: Verbose mode for console.info
 export function forAllImagesInElement(element: HTMLElement): Promise<void> {
     return Promise.all<void>(
         Array.from(element.querySelectorAll('img')).map(
-            (imgElement /*, i*/) => {
+            (imageElement /*, i*/) => {
+                // !!!!! BEFORE ANY CHANGE HERE> TODO: forAllImagesInElement should be internally using forImage
+
                 return new Promise((resolve, reject) => {
-                    if (imgElement.complete) {
-                        if (imgElement.naturalHeight === 0) {
+                    if (imageElement.complete) {
+                        if (imageElement.naturalHeight === 0) {
                             /*
                         console.info(
                             `Image ${i} rejected due to 0 naturalHeight`,
@@ -25,23 +27,23 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
                         */
 
                             // TODO: !!! Check this also in load
-                            reject(imgElement);
+                            reject(imageElement);
                         } else {
                             // console.info(`Image ${i} is already completed`);
                             resolve();
                         }
                     }
 
-                    imgElement.addEventListener('load', () => {
+                    imageElement.addEventListener('load', () => {
                         // console.info(`Image ${i} resolved`);
                         resolve();
                     });
-                    imgElement.addEventListener('error', () => {
+                    imageElement.addEventListener('error', () => {
                         // console.info(`Image ${i} rejected`);
                         // TODO: !!! imgElement into ImageError
                         reject(
                             new Error(
-                                `Some images can\`t be loaded. If you want to supress this error keep rejectWhenNotLoaded=false (default value).`,
+                                `Some images can\`t be loaded.`,
                             ),
                         );
                     });
@@ -54,5 +56,6 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
 }
 
 /**
- * TODO: !!! forAllImagesInElement should be able to recieve an <img> element
+ * TODO: forAllImagesInElement should be internally using forImage
+ * TODO: forAllImagesInElement should be able to recieve an <img> element
  */
