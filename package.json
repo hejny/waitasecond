@@ -54,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:hejny/waitasecond.git"
+    "url": "https://github.com/hejny/waitasecond"
   },
   "author": "Pavol Hejný",
   "license": "SEE LICENSE IN LICENSE",
