@@ -18,3 +18,7 @@ export async function forValueDefined<T>(
     }
     throw new Error(`Limit ${limit} overflowed in waitForDefined.`);
 }
+
+/**
+ * TODO: !!! Use type-fest
+ */
