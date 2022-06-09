@@ -1,16 +1,16 @@
 {
     "name": "waitasecond",
-    "version": "1.8.10",
-    "description": "Simple tool library for the waiting using Promises.",
+    "version": "1.9.0",
+    "description": "Wait a second is an extremely simple and elegant tool for using working with async code and Promises. It is usable by browser, worker, and node environment and fully typed.",
     "sideEffects": false,
     "main": "./dist/main.js",
     "types": "./dist/main.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com:hejny/waitasecond.git"
+        "url": "https://github.com/hejny/waitasecond"
     },
     "author": "Pavol Hejný",
-    "license": "MIT",
+    "license": "SEE LICENSE IN LICENSE",
     "scripts": {
         "test": "npm run test-unit && npm run test-integration",
         "test-unit": "jest --config jestconfig.json",
@@ -25,104 +25,39 @@
         "-----generate-documentation": "typedoc",
         "-----generate-documentation-commit": "git diff --exit-code && npm run generate-documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
         "lint": "tslint -p tsconfig.json",
-        "----generate-main-exports": "ts-node --project ./scripts/generate-main-exports/tsconfig.json ./scripts/generate-main-exports/generate-main-exports.ts",
-        "----generate-main-exports-commit": "git diff --exit-code && npm run generate-main-exports && npm run prettier && git add src && git commit --allow-empty -m \"Updating exports\"",
-        "preversion": "npm run lint && npm test",
-        "postversion": "git push && git push --tags"
+        "generate-main-exports": "ts-node --project ./scripts/generate-main-exports/tsconfig.json ./scripts/generate-main-exports/generate-main-exports.ts",
+        "generate-main-exports-commit": "git diff --exit-code && npm run generate-main-exports && npm run prettier && git add src && git commit --allow-empty -m \"Updating exports\"",
+        "preversion": "npm run lint && npm test && npm run generate-main-exports-commit && npm run build && npm run prettier-commit",
+        "postversion": "npm run generate-documentation-commit && git push && git push --tags && npm publish"
+    },
+    "dependencies": {
+        "ts-essentials": "8.1.0"
     },
     "dependencies": {},
     "devDependencies": {
-        "@rollup/plugin-typescript": "^8.3.0",
-        "@types/cypress-image-snapshot": "^3.1.6",
-        "@types/express": "^4.17.13",
-        "@types/jest": "^27.0.1",
-        "@types/serve-index": "^1.9.1",
-        "codecov": "^3.8.3",
-        "cypress": "^8.4.0",
-        "cypress-image-snapshot": "^4.0.1",
-        "express": "^4.17.1",
-        "express-throttle-bandwidth": "^1.0.1",
-        "glob-promise": "^4.2.0",
-        "jest": "^27.2.0",
-        "onchange": "^7.1.0",
-        "open": "^8.2.1",
-        "organize-imports-cli": "^0.8.0",
-        "prettier": "^2.4.0",
-        "rollup": "^2.60.0",
-        "serve-index": "^1.9.1",
-        "serve-static": "^1.14.1",
-        "ts-essentials": "^8.1.0",
-        "ts-jest": "^27.0.5",
-        "ts-node": "^10.2.1",
-        "ts-node-dev": "^1.1.8",
-        "tslib": "^2.3.1",
-        "tslint": "^5.20.1",
-        "tslint-config-prettier": "^1.18.0",
-        "type-fest": "^2.5.3",
-        "typedoc": "^0.22.3",
-        "typescript": "^4.4.3"
-    },
-    "exports": {
-        ".": "./dist/main.js",
-        "./ITime": "./dist/interfaces/ITime.js",
-        "./IHour": "./dist/interfaces/ITime.js",
-        "./IMinute": "./dist/interfaces/ITime.js",
-        "./forEver": "./dist/for/basic/forEver.js",
-        "./forDate": "./dist/for/basic/forDate.js",
-        "./forTimeout": "./dist/for/basic/forTimeout.js",
-        "./forTimeInDay": "./dist/for/basic/forTimeInDay.js",
-        "./forImmediate": "./dist/for/basic/forImmediate.js",
-        "./forTimeSynced": "./dist/for/basic/forTimeSynced.js",
-        "./forImagesReady": "./dist/for/browser/forImagesReady.js",
-        "./forDocumentLoad": "./dist/for/browser/forDocumentLoad.js",
-        "./forValueDefined": "./dist/for/basic/forValueDefined.js",
-        "./forAnimationFrame": "./dist/for/browser/forAnimationFrame.js",
-        "./forDOMContentLoaded": "./dist/for/browser/forDOMContentLoaded.js"
-    },
-    "typesVersions": {
-        "*": {
-            "./ITime": [
-                "./dist/interfaces/ITime.d.ts"
-            ],
-            "./IHour": [
-                "./dist/interfaces/ITime.d.ts"
-            ],
-            "./IMinute": [
-                "./dist/interfaces/ITime.d.ts"
-            ],
-            "./forEver": [
-                "./dist/for/basic/forEver.d.ts"
-            ],
-            "./forDate": [
-                "./dist/for/basic/forDate.d.ts"
-            ],
-            "./forTimeout": [
-                "./dist/for/basic/forTimeout.d.ts"
-            ],
-            "./forTimeInDay": [
-                "./dist/for/basic/forTimeInDay.d.ts"
-            ],
-            "./forImmediate": [
-                "./dist/for/basic/forImmediate.d.ts"
-            ],
-            "./forTimeSynced": [
-                "./dist/for/basic/forTimeSynced.d.ts"
-            ],
-            "./forImagesReady": [
-                "./dist/for/browser/forImagesReady.d.ts"
-            ],
-            "./forDocumentLoad": [
-                "./dist/for/browser/forDocumentLoad.d.ts"
-            ],
-            "./forValueDefined": [
-                "./dist/for/basic/forValueDefined.d.ts"
-            ],
-            "./forAnimationFrame": [
-                "./dist/for/browser/forAnimationFrame.d.ts"
-            ],
-            "./forDOMContentLoaded": [
-                "./dist/for/browser/forDOMContentLoaded.d.ts"
-            ]
-        }
+        "@types/cypress-image-snapshot": "3.1.6",
+        "@types/express": "4.17.13",
+        "@types/jest": "27.0.1",
+        "@types/serve-index": "1.9.1",
+        "codecov": "3.8.3",
+        "cypress": "8.4.0",
+        "cypress-image-snapshot": "4.0.1",
+        "express": "4.17.1",
+        "express-throttle-bandwidth": "1.0.1",
+        "glob-promise": "4.2.0",
+        "jest": "27.2.0",
+        "onchange": "7.1.0",
+        "open": "8.2.1",
+        "organize-imports-cli": "0.8.0",
+        "prettier": "2.4.0",
+        "serve-index": "1.9.1",
+        "serve-static": "1.14.1",
+        "ts-jest": "27.0.5",
+        "ts-node": "10.2.1",
+        "ts-node-dev": "1.1.8",
+        "tslint": "5.20.1",
+        "tslint-config-prettier": "1.18.0",
+        "typedoc": "0.22.11",
+        "typescript": "4.4.3"
     }
 }
