@@ -12,6 +12,7 @@ export function forEver(): Promise<never> {
         //       So I have to prevent this behavior by keeping the reference to the resolve function and holding Node on to hope that something can happen.
 
         setInterval(() => {
+            // tslint:disable-next-line:no-unused-expression
             resolve /* <- Note: Not called just keeping a reference */;
         }, 3600 * 1000 /* <- Note: It does not matter how frequent this interval is */);
     });
