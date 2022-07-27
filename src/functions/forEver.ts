@@ -1,7 +1,7 @@
 /**
  * 🌌 Waits until end of the universe
  *
- * @returns {Promise<void>} that never ever resolved
+ * @returns {Promise<never>} that never ever resolved
  */
 export function forEver(): Promise<never> {
     return new Promise((resolve) => {
