@@ -3,7 +3,7 @@
 
 import { forAllImagesInElement } from './functions/forAllImagesInElement.js';
 import { forAnimationFrame } from './functions/forAnimationFrame.js';
-import { forDocumentLoad } from './functions/forDocumentLoad.js';
+import { forDocumentReady } from './functions/forDocumentReady.js';
 import { forDOMContentLoaded } from './functions/forDOMContentLoaded.js';
 import { forEver } from './functions/forEver.js';
 import { forImage } from './functions/forImage.js';
@@ -21,7 +21,7 @@ export {
     forImmediate,
     forTimeSynced,
     forValueDefined,
-    forDocumentLoad,
+    forDocumentReady,
     forAnimationFrame,
     forDOMContentLoaded,
     forAllImagesInElement,
