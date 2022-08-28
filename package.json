@@ -1,6 +1,6 @@
 {
     "name": "waitasecond",
-    "version": "1.9.0",
+    "version": "1.10.0",
     "description": "Wait a second is an extremely simple and elegant tool for using working with async code and Promises. It is usable by browser, worker, and node environment and fully typed.",
     "sideEffects": false,
     "main": "./dist/main.js",
