@@ -13,4 +13,3 @@ export async function forTimeInDay(fromTime: ITime, toTime: ITime): Promise<void
 
 // !!! To samples
 // !!! To README
-
