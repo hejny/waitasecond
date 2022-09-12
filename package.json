@@ -1,6 +1,6 @@
 {
     "name": "waitasecond",
-    "version": "1.9.0",
+    "version": "1.11.1",
     "description": "Wait a second is an extremely simple and elegant tool for using working with async code and Promises. It is usable by browser, worker, and node environment and fully typed.",
     "sideEffects": false,
     "main": "./dist/main.js",
@@ -14,7 +14,8 @@
     "scripts": {
         "test": "npm run test-unit && npm run test-integration",
         "test-unit": "jest --config jestconfig.json",
-        "test-integration": "./node_modules/.bin/cypress run",
+        "test-integration": "",
+        "--TODO--test-integration": "./node_modules/.bin/cypress run",
         "test-integration-interactive": "./node_modules/.bin/cypress open",
         "samples-server": "ts-node-dev --project ./samples/samplesServer/tsconfig.json ./samples/samplesServer/samplesServer.ts",
         "build": "rm -rf ./dist && rollup --config rollup.config.ts",
