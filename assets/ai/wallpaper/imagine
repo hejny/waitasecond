@@ -2,3 +2,4 @@
 #       And every first line will be searched during the harvesting phase
 
 Wait a second is an extremely simple and elegant tool for using working with async code and Promises. It is usable by browser, worker, and node environment and fully typed.
+--version 4
