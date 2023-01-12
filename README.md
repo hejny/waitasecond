@@ -13,8 +13,8 @@
 
 <!--/Badges-->
 
-Wait a second is an extremely simple and elegant tool for using **working with async code and [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)**. It is usable by browser, worker, and node environment and fully typed.
 
+Waitasecond is a javascript library that makes managing **async code and [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** simple and elegant. It provides an await-like API that can be used in the browser, worker, and node environment, making it a powerful tool for any project. Additionally, the library is fully typed, allowing developers to have complete confidence in the reliability of their code. With Waitasecond, developers can easily and reliably handle any asynchronous task with ease.
 
 
 <!--Wallpaper-->
