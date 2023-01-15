@@ -1,4 +1,5 @@
 # Note: Each part is new input for imagine command
 #       And every first line will be searched during the harvesting phase
+# @batch-project-editor ignore
 
-Waitasecond is a javascript library that makes managing async code and Promises simple and elegant. It provides an await-like API that can be used in the browser, worker, and node environment, making it a powerful tool for any project. Additionally, the library is fully typed, allowing developers to have complete confidence in the reliability of their code. With Waitasecond, developers can easily and reliably handle any asynchronous task with ease.
+Time
