@@ -1,11 +1,10 @@
 import { AsyncOrSync } from 'ts-essentials';
-import { forTime } from './forTime.js';
 
 // TODO: !!! Options style in func params everywhere
 export async function forValueDefined<T>(
     getValue: () => AsyncOrSync<T | undefined | null>,
     waiter: () => Promise<void> = async () => {
-        await forTime(10);
+        await forTimeout(10);
     },
     limit: number = 1000,
 ): Promise<T> {

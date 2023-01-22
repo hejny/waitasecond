@@ -1,14 +1,19 @@
+# IDEs
+/.idea
+/.vscode
+!/.vscode/terminals.json
+!/.vscode/settings.json
+
+
 /dist
 /coverage
 
-# IDEs
-.idea
-.vscode/*
-!.vscode/terminals.json
-!.vscode/settings.json
+/src/main.ts
 
-node_modules
+
+/node_modules
 
 
 .~lock*
 
+/secrets.md

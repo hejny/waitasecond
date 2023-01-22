@@ -2,8 +2,10 @@
     "compilerOptions": {
         "target": "es3",
         "module": "commonjs",
+        "sourceMap": true,
         "declaration": true,
-        "outDir": "./dist",
+        "noEmit": true,
+        "outDir": "typings",
         "alwaysStrict": true,
         "forceConsistentCasingInFileNames": true,
         "lib": ["dom", "es2017"],

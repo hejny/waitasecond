@@ -2,6 +2,7 @@
 import { readFile, writeFile } from 'fs';
 import glob from 'glob-promise';
 import { join, relative } from 'path';
+import { PackageJson } from 'type-fest';
 import { promisify } from 'util';
 
 // TODO: Activate TypeScript 3.8 and use top level await instead of wrapped code by main function
@@ -64,10 +65,50 @@ async function main() {
 
     await promisify(writeFile)(join(__dirname, '../../src/main.ts'), content);
 
+    const packageJson: PackageJson = JSON.parse(
+        await promisify(readFile)(
+            join(__dirname, '../../package.json'),
+            'utf8',
+        ),
+    ) as PackageJson;
+
+    // TODO: Do not put interfaces into exports
+    packageJson.exports = Object.fromEntries([
+        ['.', './dist/main.js'],
+        ...exports.map(({ name, path }) => [
+            `./${name}`,
+            './' +
+                relative(join(__dirname, '../..'), path)
+                    .split('\\')
+                    .join('/')
+                    .replace(/\.ts$/, '.js')
+                    .replace(/^src\//, 'dist/'),
+        ]),
+    ]);
+    packageJson.typesVersions = {
+        '*': Object.fromEntries(
+            exports.map(({ name, path }) => [
+                `./${name}`,
+                [
+                    './' +
+                        relative(join(__dirname, '../..'), path)
+                            .split('\\')
+                            .join('/')
+                            .replace(/\.ts$/, '.d.ts')
+                            .replace(/^src\//, 'dist/'),
+                ],
+            ]),
+        ),
+    };
+
+    await promisify(writeFile)(
+        join(__dirname, '../../package.json'),
+        JSON.stringify(packageJson, null, 4),
+    );
+
     // Note: Here is not prettier due to prettier will be triggered automatically by prettier-watch script
 }
 
 /**
- * TODO: Generate also exports and typesVersions in package.json
  * TODO: This should be an indipendent lib
  */

@@ -1,3 +1,23 @@
+/*
+
+export class EnhancedPromise<T> extends Promise<T> {
+
+
+  or(){
+
+  }
+
+  withTimeout(timeout: number): Promise<T> {
+  }
+}
+
+
+
+
+/*
+TODO: withTimeout >
+
+
 import { forTime } from './forTime.js';
 
 export async function forTimeout<T>(
@@ -7,7 +27,7 @@ export async function forTimeout<T>(
     return await Promise.race([
         value,
         (async () => {
-            await forTime(timeout);
+            await forTimeout(timeout);
             throw new Error(`Timeout ${timeout}ms is up.`);
         })(),
     ]);
@@ -27,7 +47,7 @@ async function forTimeout<T>(
     return await Promise.race([
         options.value,
         (async () => {
-            await forTime(options.timeout);
+            await forTimeout(options.timeout);
             throw new Error(`Timeout ${options.timeout}ms is up.`);
         })(),
     ]);

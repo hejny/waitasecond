@@ -5,53 +5,6 @@
     "sideEffects": false,
     "main": "./dist/main.js",
     "types": "./dist/main.d.ts",
-    "exports": {
-        ".": "./dist/main.js",
-        "./forAllImagesInElement": "./dist/functions/forAllImagesInElement.js",
-        "./forAnimationFrame": "./dist/functions/forAnimationFrame.js",
-        "./forDocumentLoad": "./dist/functions/forDocumentLoad.js",
-        "./forDOMContentLoaded": "./dist/functions/forDOMContentLoaded.js",
-        "./forEver": "./dist/functions/forEver.js",
-        "./forImmediate": "./dist/functions/forImmediate.js",
-        "./forTime": "./dist/functions/forTime.js",
-        "./forTimeout": "./dist/functions/forTimeout.js",
-        "./forTimeSynced": "./dist/functions/forTimeSynced.js",
-        "./forValueDefined": "./dist/functions/forValueDefined.js"
-    },
-    "typesVersions": {
-        "*": {
-            "./forAllImagesInElement": [
-                "./dist/functions/forAllImagesInElement.d.ts"
-            ],
-            "./forAnimationFrame": [
-                "./dist/functions/forAnimationFrame.d.ts"
-            ],
-            "./forDocumentLoad": [
-                "./dist/functions/forDocumentLoad.d.ts"
-            ],
-            "./forDOMContentLoaded": [
-                "./dist/functions/forDOMContentLoaded.d.ts"
-            ],
-            "./forEver": [
-                "./dist/functions/forEver.d.ts"
-            ],
-            "./forImmediate": [
-                "./dist/functions/forImmediate.d.ts"
-            ],
-            "./forTime": [
-                "./dist/functions/forTime.d.ts"
-            ],
-            "./forTimeout": [
-                "./dist/functions/forTimeout.d.ts"
-            ],
-            "./forTimeSynced": [
-                "./dist/functions/forTimeSynced.d.ts"
-            ],
-            "./forValueDefined": [
-                "./dist/functions/forValueDefined.d.ts"
-            ]
-        }
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/hejny/waitasecond"
@@ -65,13 +18,13 @@
         "--TODO--test-integration": "./node_modules/.bin/cypress run",
         "test-integration-interactive": "./node_modules/.bin/cypress open",
         "samples-server": "ts-node-dev --project ./samples/samplesServer/tsconfig.json ./samples/samplesServer/samplesServer.ts",
-        "build": "tsc",
-        "build-watch": "tsc --watch",
+        "build": "rm -rf ./dist && rollup --config rollup.config.ts",
+        "build-watch": "rollup --config rollup.config.ts --watch",
         "prettier": "prettier --config .prettierrc --write \"{src,test,.vscode}/**/*.{ts,json}\"",
         "pretty-imports": "npx organize-imports-cli tsconfig.json",
         "prettier-commit": "git diff --exit-code && npm run pretty-imports && npm run prettier && git add src && git commit --allow-empty -m \"Prettier\"",
-        "generate-documentation": "typedoc",
-        "generate-documentation-commit": "git diff --exit-code && npm run generate-documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
+        "-----generate-documentation": "typedoc",
+        "-----generate-documentation-commit": "git diff --exit-code && npm run generate-documentation && git add docs && git commit --allow-empty -m \"Documentation\"",
         "lint": "tslint -p tsconfig.json",
         "generate-main-exports": "ts-node --project ./scripts/generate-main-exports/tsconfig.json ./scripts/generate-main-exports/generate-main-exports.ts",
         "generate-main-exports-commit": "git diff --exit-code && npm run generate-main-exports && npm run prettier && git add src && git commit --allow-empty -m \"Updating exports\"",
@@ -81,6 +34,7 @@
     "dependencies": {
         "ts-essentials": "8.1.0"
     },
+    "dependencies": {},
     "devDependencies": {
         "@types/cypress-image-snapshot": "3.1.6",
         "@types/express": "4.17.13",

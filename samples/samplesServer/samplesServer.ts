@@ -1,9 +1,9 @@
 // TODO: !!! Import
-import { forTime } from '../../src/functions/forTime';
 import express from 'express';
-import serveStatic from 'serve-static';
-import serveIndex from 'serve-index';
 import path from 'path';
+import serveIndex from 'serve-index';
+import serveStatic from 'serve-static';
+import { forTimeout } from '../../src/for/basic/forTimeout';
 // import opn from 'open';
 
 // TODO: !!! Uninstall express-throttle-bandwidth
@@ -27,7 +27,7 @@ app.use(async (request, response, next) => {
                 .status(400)
                 .send(`Query parameter "throttle" should be valid number.`);
         }
-        await forTime(throttle);
+        await forTimeout(throttle);
     }
     return next();
 });
@@ -35,7 +35,9 @@ app.use(serveStatic(staticBasePath, { index: false, cacheControl: false }));
 app.use(serveIndex(staticBasePath, { icons: true }));
 app.listen(PORT);
 
-console.log(`Static server listening on port ${PORT}.`);
+console.log(
+    `Static server listening on port http://localhost:${PORT}/samples/`,
+);
 // TODO: Only if not opened
 // !!! opn(`http://localhost:${PORT}/samples`);
 

@@ -1,0 +1,6 @@
+TODO: Test usage of this library in multiple situations:
+
+node
+ts-node
+CRA (create react app)
+CRA (create react app) with typescript
