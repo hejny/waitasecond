@@ -1,14 +1,3 @@
-/*
-TODO: !!! Rename forImagesReady, forMediaReady
-TODO: !!! Timeout by chaining
-TODO: !!! rejectWhenNotLoaded by chaining
-TODO: !!! Corrupted images into samples
-TODO: !!! Also with media and pictures
-TODO: !!! Universal for every loadable think
-TODO: !!! Also start new wait when  new images appears / disappears during the wait
-TODO: Verbose mode for console.info
-*/
-
 // tslint:disable:no-console
 
 export function forAllImagesInElement(element: HTMLElement): Promise<void> {
@@ -54,4 +43,12 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
 /**
  * TODO: forAllImagesInElement should be internally using forImage
  * TODO: forAllImagesInElement should be able to recieve an <img> element
- */
+ * TODO: !! Rename forImagesReady, forMediaReady
+TODO: Timeout by chaining
+TODO: rejectWhenNotLoaded by chaining
+TODO: Corrupted images into samples
+TODO: Also with media and pictures
+TODO: Universal for every loadable think
+TODO: Also start new wait when  new images appears / disappears during the wait
+TODO: Verbose mode for logging
+*/
