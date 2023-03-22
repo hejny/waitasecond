@@ -37,6 +37,6 @@ app.listen(PORT);
 
 console.log(`Static server listening on port ${PORT}.`);
 // TODO: Only if not opened
-// !!! opn(`http://localhost:${PORT}/samples`);
+// TODO: !!! opn(`http://localhost:${PORT}/samples`);
 
 // TODO: !!! Do not run samples server without build watch
