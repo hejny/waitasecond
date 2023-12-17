@@ -4,7 +4,6 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
     return Promise.all<void>(
         Array.from(element.querySelectorAll('img')).map(
             (imageElement /*, i*/) => {
-              
                 // TODO: BEFORE ANY CHANGE HERE forAllImagesInElement should be internally using forImage
 
                 return new Promise((resolve, reject) => {
@@ -53,4 +52,4 @@ export function forAllImagesInElement(element: HTMLElement): Promise<void> {
  * TODO: Also start new wait when  new images appears / disappears during the wait
  * TODO: [0] Verbose mode for logging
  * TODO: Make special error - ImageError and put imgElement as extra data of ImageError
-*/
+ */
