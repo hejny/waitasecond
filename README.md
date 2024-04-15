@@ -203,12 +203,8 @@ You can also ⭐ star the waitasecond package, [follow me on GitHub](https://git
   <img src="https://collboard.fra1.cdn.digitaloceanspaces.com/assets/18.12.1/logo-small.png" alt="Collboard logo" width="50"  />
 </a>
 &nbsp;&nbsp;&nbsp;
-<a href="https://czech.events/">
-  <img src="https://czech.events/design/logos/czech.events.transparent-logo.png" alt="Czech.events logo" width="50"  />
-</a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://sigmastamp.ml/">
-  <img src="https://www.sigmastamp.ml/sigmastamp-logo.white.svg" alt="SigmaStamp logo" width="50"  />
+<a href="https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=github-readme&utm_campaign=partner-ph">
+  <img src="https://webgpt.cz/_next/static/media/webgpt.white.04a40f79.svg" alt="WebGPT logo" width="50"  />
 </a>
 
 
