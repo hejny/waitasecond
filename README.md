@@ -204,7 +204,7 @@ You can also ⭐ star the waitasecond package, [follow me on GitHub](https://git
 </a>
 &nbsp;&nbsp;&nbsp;
 <a href="https://webgpt.cz/?partner=ph&utm_medium=referral&utm_source=github-readme&utm_campaign=partner-ph">
-  <img src="https://webgpt.cz/_next/static/media/webgpt.white.04a40f79.svg" alt="WebGPT logo" width="50"  />
+  <img src="https://webgpt.cz/_next/static/media/webgpt.black.b25d862f.svg" alt="WebGPT logo" width="50"  />
 </a>
 
 
