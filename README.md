@@ -10,6 +10,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/hejny/waitasecond/badge.svg)](https://snyk.io/test/github/hejny/waitasecond)
 [![Issues](https://img.shields.io/github/issues/hejny/waitasecond.svg?style=flat)](https://github.com/hejny/waitasecond/issues)
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
+[![Socket](https://socket.dev/api/badge/npm/package/waitasecond)](https://socket.dev/npm/package/waitasecond)
 
 <!--/Badges-->
 
