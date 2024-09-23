@@ -57,7 +57,7 @@
         "url": "https://github.com/hejny/waitasecond"
     },
     "author": "Pavol Hejný",
-    "license": "SEE LICENSE IN LICENSE",
+    "license": "Apache-2.0",
     "scripts": {
         "test": "npm run test-unit && npm run test-integration",
         "test-unit": "jest --config jestconfig.json",
