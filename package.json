@@ -1,6 +1,6 @@
 {
     "name": "waitasecond",
-    "version": "1.11.150",
+    "version": "1.11.151",
     "description": "Waitasecond is a javascript library that makes managing async code and Promises simple and elegant. It provides an await-like API that can be used in the browser, worker, and node environment, making it a powerful tool for any project. Additionally, the library is fully typed, allowing developers to have complete confidence in the reliability of their code. With Waitasecond, developers can easily and reliably handle any asynchronous task with ease.",
     "sideEffects": false,
     "main": "./dist/main.js",
