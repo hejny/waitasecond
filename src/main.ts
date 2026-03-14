@@ -14,15 +14,15 @@ import { forTimeSynced } from './functions/forTimeSynced.js';
 import { forValueDefined } from './functions/forValueDefined.js';
 
 export {
-  forTime,
-  forEver,
-  forImage,
-  forTimeout,
-  forImmediate,
-  forTimeSynced,
-  forValueDefined,
-  forDocumentReady,
-  forAnimationFrame,
-  forDOMContentLoaded,
-  forAllImagesInElement,
+    forTime,
+    forEver,
+    forImage,
+    forTimeout,
+    forImmediate,
+    forTimeSynced,
+    forValueDefined,
+    forDocumentReady,
+    forAnimationFrame,
+    forDOMContentLoaded,
+    forAllImagesInElement,
 };
